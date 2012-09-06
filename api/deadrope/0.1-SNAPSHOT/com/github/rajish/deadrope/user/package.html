@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>com.github.rajish.deadrope.user</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../../../lib/template.css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../../../lib/package_big.png" />
+        <p id="owner"><a name="com" class="extype" href="../../../../package.html">com</a>.<a name="com.github" class="extype" href="../../../package.html">github</a>.<a name="com.github.rajish" class="extype" href="../../package.html">rajish</a>.<a name="com.github.rajish.deadrope" class="extype" href="../package.html">deadrope</a></p>
+        <h1>user</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="kind">package</span>
+      <span class="symbol"> 
+        <span class="name">user</span>
+        
+        
+      </span>
+      </h4>
+      
+          <div class="fullcommenttop" id="comment"></div>
+        
+
+      <div id="template">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="com.github.rajish.deadrope.user.ACLItem" data-isabs="true">
+      <a id="ACLItem:ACLItem"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="ACLItem.html"><span class="name">ACLItem</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="com.github.rajish.deadrope.user.Permission" data-isabs="true">
+      <a id="Permission:Permission"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="Permission.html"><span class="name">Permission</span></a>
+        
+        <span class="result"> extends ACLItem</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Apart from roles, users can have permissions to perform some tasks.</p>
+    </li><li visbl="pub" name="com.github.rajish.deadrope.user.Role" data-isabs="true">
+      <a id="Role:Role"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="Role.html"><span class="name">Role</span></a>
+        
+        <span class="result"> extends ACLItem</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Users possess Roles that indicate what features and parts of your
+Play application they have access to.</p>
+    </li><li visbl="pub" name="com.github.rajish.deadrope.user.RoleHolder" data-isabs="true">
+      <a id="RoleHolder:RoleHolder"></a>
+      <h4 class="signature">
+      <span class="kind">trait</span>
+      <span class="symbol"> 
+        <a href="RoleHolder.html"><span class="name">RoleHolder</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provides the concept of &quot;something that has roles&quot;.</p>
+    </li><li visbl="pub" name="com.github.rajish.deadrope.user.UserFactory" data-isabs="true">
+      <a id="UserFactory:UserFactory"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="UserFactory.html"><span class="name">UserFactory</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li></ol>
+            </div>
+        
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="com.github.rajish.deadrope.user.NoPermission" data-isabs="false">
+      <a id="NoPermission:NoPermission"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="NoPermission$.html"><span class="name">NoPermission</span></a>
+        
+        <span class="result"> extends Permission</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An object indicating that no permission was found
+</p>
+    </li><li visbl="pub" name="com.github.rajish.deadrope.user.NoRole" data-isabs="false">
+      <a id="NoRole:NoRole"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="NoRole$.html"><span class="name">NoRole</span></a>
+        
+        <span class="result"> extends Role</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An object indicating that no role was found
+</p>
+    </li><li visbl="pub" name="com.github.rajish.deadrope.user.Permission" data-isabs="false">
+      <a id="Permission:Permission"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Permission$.html"><span class="name">Permission</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="com.github.rajish.deadrope.user.Role" data-isabs="false">
+      <a id="Role:Role"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Role$.html"><span class="name">Role</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Helper object for Roles.</p>
+    </li><li visbl="pub" name="com.github.rajish.deadrope.user.package#symbolAsRole" data-isabs="false">
+      <a id="symbolAsRole(Symbol):Role"></a>
+      <h4 class="signature">
+      <span class="kind">implicit def</span>
+      <span class="symbol"> 
+        <span class="name">symbolAsRole</span>
+        
+        <span class="params">(<span name="sym">sym: <span name="scala.Symbol" class="extype">Symbol</span></span>)</span><span class="result">: <a name="com.github.rajish.deadrope.user.Role" class="extype" href="Role.html">Role</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="com.github.rajish.deadrope.user.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+      </div>
+      
+      <div id="tooltip"></div>
+      
+    </body>
+      </html>
