@@ -1,0 +1,928 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>com.traackr.scalastic.elasticsearch.Indexing</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
+      <div id="definition">
+        <img src="../../../../lib/trait_big.png" />
+        <p id="owner"><a name="com" class="extype" href="../../../package.html">com</a>.<a name="com.traackr" class="extype" href="../../package.html">traackr</a>.<a name="com.traackr.scalastic" class="extype" href="../package.html">scalastic</a>.<a name="com.traackr.scalastic.elasticsearch" class="extype" href="package.html">elasticsearch</a></p>
+        <h1>Indexing</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Indexing</span><span class="result"> extends <a name="com.traackr.scalastic.elasticsearch.Index" class="extype" href="Index.html">Index</a> with <a name="com.traackr.scalastic.elasticsearch.Bulk" class="extype" href="Bulk.html">Bulk</a> with <a name="com.traackr.scalastic.elasticsearch.Searching" class="extype" href="Searching.html">Searching</a> with <a name="com.traackr.scalastic.elasticsearch.Count" class="extype" href="Count.html">Count</a> with <a name="com.traackr.scalastic.elasticsearch.Get" class="extype" href="Get.html">Get</a> with <a name="com.traackr.scalastic.elasticsearch.Multiget" class="extype" href="Multiget.html">Multiget</a> with <a name="com.traackr.scalastic.elasticsearch.Delete" class="extype" href="Delete.html">Delete</a> with <a name="com.traackr.scalastic.elasticsearch.DeleteByQuery" class="extype" href="DeleteByQuery.html">DeleteByQuery</a></span>
+      </span>
+      </h4>
+      
+      <div class="fullcommenttop" id="comment"><dl class="attributes block"> <dt>Self Type</dt><dd><a name="com.traackr.scalastic.elasticsearch.Indexer" class="extype" href="Indexer.html">Indexer</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a name="com.traackr.scalastic.elasticsearch.DeleteByQuery" class="extype" href="DeleteByQuery.html">DeleteByQuery</a>, <a name="com.traackr.scalastic.elasticsearch.Delete" class="extype" href="Delete.html">Delete</a>, <a name="com.traackr.scalastic.elasticsearch.Multiget" class="extype" href="Multiget.html">Multiget</a>, <a name="com.traackr.scalastic.elasticsearch.Get" class="extype" href="Get.html">Get</a>, <a name="com.traackr.scalastic.elasticsearch.Count" class="extype" href="Count.html">Count</a>, <a name="com.traackr.scalastic.elasticsearch.Searching" class="extype" href="Searching.html">Searching</a>, <a name="com.traackr.scalastic.elasticsearch.ValidateQuery" class="extype" href="ValidateQuery.html">ValidateQuery</a>, <a name="com.traackr.scalastic.elasticsearch.Percolate" class="extype" href="Percolate.html">Percolate</a>, <a name="com.traackr.scalastic.elasticsearch.Multisearch" class="extype" href="Multisearch.html">Multisearch</a>, <a name="com.traackr.scalastic.elasticsearch.MoreLikeThis" class="extype" href="MoreLikeThis.html">MoreLikeThis</a>, <a name="com.traackr.scalastic.elasticsearch.SearchScroll" class="extype" href="SearchScroll.html">SearchScroll</a>, <a name="com.traackr.scalastic.elasticsearch.Search" class="extype" href="Search.html">Search</a>, <a name="com.traackr.scalastic.elasticsearch.Query" class="extype" href="Query.html">Query</a>, <a name="com.traackr.scalastic.elasticsearch.Bulk" class="extype" href="Bulk.html">Bulk</a>, <a name="com.traackr.scalastic.elasticsearch.Index" class="extype" href="Index.html">Index</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="com.traackr.scalastic.elasticsearch.ClientIndexer" class="extype" href="ClientIndexer.html">ClientIndexer</a>, <a name="com.traackr.scalastic.elasticsearch.Indexer" class="extype" href="Indexer.html">Indexer</a>, <a name="com.traackr.scalastic.elasticsearch.NodeIndexer" class="extype" href="NodeIndexer.html">NodeIndexer</a></div>
+        </div></div>
+    
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+            </div>
+        <div id="ancestors">
+              <span class="filtertype">Inherited</span>
+              <ol><li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li></ol>
+              <ol id="linearization"><li name="com.traackr.scalastic.elasticsearch.Indexing" class="in"><span>Indexing</span></li><li name="com.traackr.scalastic.elasticsearch.DeleteByQuery" class="in"><span>DeleteByQuery</span></li><li name="com.traackr.scalastic.elasticsearch.Delete" class="in"><span>Delete</span></li><li name="com.traackr.scalastic.elasticsearch.Multiget" class="in"><span>Multiget</span></li><li name="com.traackr.scalastic.elasticsearch.Get" class="in"><span>Get</span></li><li name="com.traackr.scalastic.elasticsearch.Count" class="in"><span>Count</span></li><li name="com.traackr.scalastic.elasticsearch.Searching" class="in"><span>Searching</span></li><li name="com.traackr.scalastic.elasticsearch.ValidateQuery" class="in"><span>ValidateQuery</span></li><li name="com.traackr.scalastic.elasticsearch.Percolate" class="in"><span>Percolate</span></li><li name="com.traackr.scalastic.elasticsearch.Multisearch" class="in"><span>Multisearch</span></li><li name="com.traackr.scalastic.elasticsearch.MoreLikeThis" class="in"><span>MoreLikeThis</span></li><li name="com.traackr.scalastic.elasticsearch.SearchScroll" class="in"><span>SearchScroll</span></li><li name="com.traackr.scalastic.elasticsearch.Search" class="in"><span>Search</span></li><li name="com.traackr.scalastic.elasticsearch.Query" class="in"><span>Query</span></li><li name="com.traackr.scalastic.elasticsearch.Bulk" class="in"><span>Bulk</span></li><li name="com.traackr.scalastic.elasticsearch.Index" class="in"><span>Index</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+            </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $hash$hash">##</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Bulk#bulk" data-isabs="false">
+      <a id="bulk[A&lt;:ActionRequest](Iterable[A],Option[WriteConsistencyLevel],Option[Boolean],Option[ReplicationType]):BulkResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bulk</span><span class="tparams">[<span name="A">A &lt;: <span name="org.elasticsearch.action.ActionRequest" class="extype">ActionRequest</span></span>]</span><span class="params">(<span name="requests">requests: <span name="scala.collection.Iterable" class="extype">Iterable</span>[A]</span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>]</span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>]</span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>]</span>)</span><span class="result">: <span name="org.elasticsearch.action.bulk.BulkResponse" class="extype">BulkResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Bulk" class="extype" href="Bulk.html">Bulk</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Bulk#bulk_prepare" data-isabs="false">
+      <a id="bulk_prepare[A&lt;:ActionRequest](Iterable[A],Option[WriteConsistencyLevel],Option[Boolean],Option[ReplicationType]):BulkRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bulk_prepare</span><span class="tparams">[<span name="A">A &lt;: <span name="org.elasticsearch.action.ActionRequest" class="extype">ActionRequest</span></span>]</span><span class="params">(<span name="requests">requests: <span name="scala.collection.Iterable" class="extype">Iterable</span>[A]</span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>]</span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>]</span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>]</span>)</span><span class="result">: <span name="org.elasticsearch.action.bulk.BulkRequestBuilder" class="extype">BulkRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Bulk" class="extype" href="Bulk.html">Bulk</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Bulk#bulk_send" data-isabs="false">
+      <a id="bulk_send[A&lt;:ActionRequest](Iterable[A],Option[WriteConsistencyLevel],Option[Boolean],Option[ReplicationType]):ListenableActionFuture[BulkResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bulk_send</span><span class="tparams">[<span name="A">A &lt;: <span name="org.elasticsearch.action.ActionRequest" class="extype">ActionRequest</span></span>]</span><span class="params">(<span name="requests">requests: <span name="scala.collection.Iterable" class="extype">Iterable</span>[A]</span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>]</span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>]</span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>]</span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.bulk.BulkResponse" class="extype">BulkResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Bulk" class="extype" href="Bulk.html">Bulk</a></dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Count#count" data-isabs="false">
+      <a id="count(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Float],Option[BroadcastOperationThreading],Option[String],Option[String]):CountResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">count</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minScore">minScore: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.broadcast.BroadcastOperationThreading" class="extype">BroadcastOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="queryHint">queryHint: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.count.CountResponse" class="extype">CountResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Count" class="extype" href="Count.html">Count</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Count#count_prepare" data-isabs="false">
+      <a id="count_prepare(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Float],Option[BroadcastOperationThreading],Option[String],Option[String]):CountRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">count_prepare</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minScore">minScore: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.broadcast.BroadcastOperationThreading" class="extype">BroadcastOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="queryHint">queryHint: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.count.CountRequestBuilder" class="extype">CountRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Count" class="extype" href="Count.html">Count</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Count#count_send" data-isabs="false">
+      <a id="count_send(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Float],Option[BroadcastOperationThreading],Option[String],Option[String]):ListenableActionFuture[CountResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">count_send</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minScore">minScore: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.broadcast.BroadcastOperationThreading" class="extype">BroadcastOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="queryHint">queryHint: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.count.CountResponse" class="extype">CountResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Count" class="extype" href="Count.html">Count</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Delete#delete" data-isabs="false">
+      <a id="delete(String,String,String,String,Option[WriteConsistencyLevel],Option[Boolean],Option[Boolean],Option[Boolean],Option[ReplicationType],Option[String],Option[Long],Option[VersionType]):DeleteResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">delete</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="parent">parent: String = <span class="symbol">null</span></span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="version">version: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Long" class="extype">Long</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="versionType">versionType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.index.VersionType" class="extype">VersionType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.delete.DeleteResponse" class="extype">DeleteResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Delete" class="extype" href="Delete.html">Delete</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.DeleteByQuery#deleteByQuery" data-isabs="false">
+      <a id="deleteByQuery(Iterable[String],Iterable[String],QueryBuilder,Option[ReplicationType],Option[WriteConsistencyLevel],Option[String],Option[String]):DeleteByQueryResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteByQuery</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="timeout">timeout: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.deletebyquery.DeleteByQueryResponse" class="extype">DeleteByQueryResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.DeleteByQuery" class="extype" href="DeleteByQuery.html">DeleteByQuery</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.DeleteByQuery#deleteByQuery_prepare" data-isabs="false">
+      <a id="deleteByQuery_prepare(Iterable[String],Iterable[String],QueryBuilder,Option[ReplicationType],Option[WriteConsistencyLevel],Option[String],Option[String]):DeleteByQueryRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteByQuery_prepare</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="timeout">timeout: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.deletebyquery.DeleteByQueryRequestBuilder" class="extype">DeleteByQueryRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.DeleteByQuery" class="extype" href="DeleteByQuery.html">DeleteByQuery</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.DeleteByQuery#deleteByQuery_send" data-isabs="false">
+      <a id="deleteByQuery_send(Iterable[String],Iterable[String],QueryBuilder,Option[ReplicationType],Option[WriteConsistencyLevel],Option[String],Option[String]):ListenableActionFuture[DeleteByQueryResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deleteByQuery_send</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="timeout">timeout: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.deletebyquery.DeleteByQueryResponse" class="extype">DeleteByQueryResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.DeleteByQuery" class="extype" href="DeleteByQuery.html">DeleteByQuery</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Delete#delete_prepare" data-isabs="false">
+      <a id="delete_prepare(String,String,String,String,Option[WriteConsistencyLevel],Option[Boolean],Option[Boolean],Option[Boolean],Option[ReplicationType],Option[String],Option[Long],Option[VersionType]):DeleteRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">delete_prepare</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="parent">parent: String = <span class="symbol">null</span></span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="version">version: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Long" class="extype">Long</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="versionType">versionType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.index.VersionType" class="extype">VersionType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.delete.DeleteRequestBuilder" class="extype">DeleteRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Delete" class="extype" href="Delete.html">Delete</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Delete#delete_send" data-isabs="false">
+      <a id="delete_send(String,String,String,String,Option[WriteConsistencyLevel],Option[Boolean],Option[Boolean],Option[Boolean],Option[ReplicationType],Option[String],Option[Long],Option[VersionType]):ListenableActionFuture[DeleteResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">delete_send</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="parent">parent: String = <span class="symbol">null</span></span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="version">version: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Long" class="extype">Long</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="versionType">versionType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.index.VersionType" class="extype">VersionType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.delete.DeleteResponse" class="extype">DeleteResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Delete" class="extype" href="Delete.html">Delete</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Get#get" data-isabs="false">
+      <a id="get(String,String,String,Iterable[String],Option[Boolean],Option[Boolean],Option[String],Option[Boolean],Option[Boolean],Option[String]):GetResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="preference">preference: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="realtime">realtime: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.get.GetResponse" class="extype">GetResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Get" class="extype" href="Get.html">Get</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Get#get_prepare" data-isabs="false">
+      <a id="get_prepare(String,String,String,Iterable[String],Option[Boolean],Option[Boolean],Option[String],Option[Boolean],Option[Boolean],Option[String]):GetRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get_prepare</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="preference">preference: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="realtime">realtime: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.get.GetRequestBuilder" class="extype">GetRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Get" class="extype" href="Get.html">Get</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Get#get_send" data-isabs="false">
+      <a id="get_send(String,String,String,Iterable[String],Option[Boolean],Option[Boolean],Option[String],Option[Boolean],Option[Boolean],Option[String]):ListenableActionFuture[GetResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get_send</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="preference">preference: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="realtime">realtime: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.get.GetResponse" class="extype">GetResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Get" class="extype" href="Get.html">Get</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Index#index" data-isabs="false">
+      <a id="index(String,String,String,String,String,Option[WriteConsistencyLevel],Option[XContentType],Option[Boolean],Option[Boolean],Option[Boolean],Option[OpType],Option[String],Option[Boolean],Option[ReplicationType],Option[String],Option[String],Option[String],Option[Long],Option[Long],Option[VersionType]):IndexResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">index</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="source">source: String</span>, <span name="parent">parent: String = <span class="symbol">null</span></span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="contentType">contentType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.common.xcontent.XContentType" class="extype">XContentType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="create">create: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="opType">opType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.index.IndexRequest.OpType" class="extype">OpType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="percolate">percolate: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="timeout">timeout: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="timestamp">timestamp: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="ttl">ttl: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Long" class="extype">Long</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="version">version: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Long" class="extype">Long</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="versionType">versionType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.index.VersionType" class="extype">VersionType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.index.IndexResponse" class="extype">IndexResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Index" class="extype" href="Index.html">Index</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Index#index_prepare" data-isabs="false">
+      <a id="index_prepare(String,String,String,String,String,Option[WriteConsistencyLevel],Option[XContentType],Option[Boolean],Option[Boolean],Option[Boolean],Option[OpType],Option[String],Option[Boolean],Option[ReplicationType],Option[String],Option[String],Option[String],Option[Long],Option[Long],Option[VersionType]):IndexRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">index_prepare</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="source">source: String</span>, <span name="parent">parent: String = <span class="symbol">null</span></span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="contentType">contentType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.common.xcontent.XContentType" class="extype">XContentType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="create">create: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="opType">opType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.index.IndexRequest.OpType" class="extype">OpType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="percolate">percolate: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="timeout">timeout: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="timestamp">timestamp: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="ttl">ttl: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Long" class="extype">Long</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="version">version: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Long" class="extype">Long</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="versionType">versionType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.index.VersionType" class="extype">VersionType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.index.IndexRequestBuilder" class="extype">IndexRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Index" class="extype" href="Index.html">Index</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Index#index_send" data-isabs="false">
+      <a id="index_send(String,String,String,String,String,Option[WriteConsistencyLevel],Option[XContentType],Option[Boolean],Option[Boolean],Option[Boolean],Option[OpType],Option[String],Option[Boolean],Option[ReplicationType],Option[String],Option[String],Option[String],Option[Long],Option[Long],Option[VersionType]):ListenableActionFuture[IndexResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">index_send</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="source">source: String</span>, <span name="parent">parent: String = <span class="symbol">null</span></span>, <span name="consistencyLevel">consistencyLevel: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.WriteConsistencyLevel" class="extype">WriteConsistencyLevel</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="contentType">contentType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.common.xcontent.XContentType" class="extype">XContentType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="create">create: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="opType">opType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.index.IndexRequest.OpType" class="extype">OpType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="percolate">percolate: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="replicationType">replicationType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.replication.ReplicationType" class="extype">ReplicationType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="timeout">timeout: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="timestamp">timestamp: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="ttl">ttl: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Long" class="extype">Long</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="version">version: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Long" class="extype">Long</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="versionType">versionType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.index.VersionType" class="extype">VersionType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.index.IndexResponse" class="extype">IndexResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Index" class="extype" href="Index.html">Index</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.MoreLikeThis#moreLikeThis" data-isabs="false">
+      <a id="moreLikeThis(String,String,String,Option[Float],Iterable[String],Option[Int],Option[Int],Option[Int],Option[Int],Option[Int],Option[Int],Option[Float],Option[Int],Iterable[String],Option[Scroll],Option[Int],Option[Map[String, AnyRef]],Option[SearchType],Iterable[String],Iterable[String]):SearchResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">moreLikeThis</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="boostTerms">boostTerms: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="maxDocFreq">maxDocFreq: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="maxQueryTerms">maxQueryTerms: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="maxWordLen">maxWordLen: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minDocFreq">minDocFreq: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minTermFreq">minTermFreq: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minWordLen">minWordLen: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="percentTermsToMatch">percentTermsToMatch: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="from">from: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchIndices">searchIndices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="searchScroll">searchScroll: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.search.Scroll" class="extype">Scroll</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchSize">searchSize: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchSource">searchSource: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.Map" class="extype">Map</span>[String, AnyRef]] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchType">searchType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchType" class="extype">SearchType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchTypes">searchTypes: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="stopwords">stopwords: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>)</span><span class="result">: <span name="org.elasticsearch.action.search.SearchResponse" class="extype">SearchResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.MoreLikeThis" class="extype" href="MoreLikeThis.html">MoreLikeThis</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.MoreLikeThis#moreLikeThis_prepare" data-isabs="false">
+      <a id="moreLikeThis_prepare(String,String,String,Option[Float],Iterable[String],Option[Int],Option[Int],Option[Int],Option[Int],Option[Int],Option[Int],Option[Float],Option[Int],Iterable[String],Option[Scroll],Option[Int],Option[Map[String, AnyRef]],Option[SearchType],Iterable[String],Iterable[String]):MoreLikeThisRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">moreLikeThis_prepare</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="boostTerms">boostTerms: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="maxDocFreq">maxDocFreq: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="maxQueryTerms">maxQueryTerms: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="maxWordLen">maxWordLen: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minDocFreq">minDocFreq: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minTermFreq">minTermFreq: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minWordLen">minWordLen: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="percentTermsToMatch">percentTermsToMatch: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="from">from: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchIndices">searchIndices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="searchScroll">searchScroll: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.search.Scroll" class="extype">Scroll</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchSize">searchSize: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchSource">searchSource: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.Map" class="extype">Map</span>[String, AnyRef]] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchType">searchType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchType" class="extype">SearchType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchTypes">searchTypes: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="stopwords">stopwords: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>)</span><span class="result">: <span name="org.elasticsearch.action.mlt.MoreLikeThisRequestBuilder" class="extype">MoreLikeThisRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.MoreLikeThis" class="extype" href="MoreLikeThis.html">MoreLikeThis</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.MoreLikeThis#moreLikeThis_send" data-isabs="false">
+      <a id="moreLikeThis_send(String,String,String,Option[Float],Iterable[String],Option[Int],Option[Int],Option[Int],Option[Int],Option[Int],Option[Int],Option[Float],Option[Int],Iterable[String],Option[Scroll],Option[Int],Option[Map[String, AnyRef]],Option[SearchType],Iterable[String],Iterable[String]):ListenableActionFuture[SearchResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">moreLikeThis_send</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="id">id: String</span>, <span name="boostTerms">boostTerms: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="maxDocFreq">maxDocFreq: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="maxQueryTerms">maxQueryTerms: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="maxWordLen">maxWordLen: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minDocFreq">minDocFreq: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minTermFreq">minTermFreq: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minWordLen">minWordLen: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="percentTermsToMatch">percentTermsToMatch: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="from">from: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchIndices">searchIndices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="searchScroll">searchScroll: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.search.Scroll" class="extype">Scroll</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchSize">searchSize: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchSource">searchSource: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.Map" class="extype">Map</span>[String, AnyRef]] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchType">searchType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchType" class="extype">SearchType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchTypes">searchTypes: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="stopwords">stopwords: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.search.SearchResponse" class="extype">SearchResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.MoreLikeThis" class="extype" href="MoreLikeThis.html">MoreLikeThis</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Multiget#multiget" data-isabs="false">
+      <a id="multiget(String,String,Iterable[String],Iterable[String],Option[Boolean],Option[String],Option[Boolean],Option[Boolean]):MultiGetResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multiget</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="ids">ids: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String]</span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="preference">preference: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="realtime">realtime: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.get.MultiGetResponse" class="extype">MultiGetResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Multiget" class="extype" href="Multiget.html">Multiget</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Multiget#multiget_prepare" data-isabs="false">
+      <a id="multiget_prepare(String,String,Iterable[String],Iterable[String],Option[Boolean],Option[String],Option[Boolean],Option[Boolean]):MultiGetRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multiget_prepare</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="ids">ids: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String]</span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="preference">preference: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="realtime">realtime: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.get.MultiGetRequestBuilder" class="extype">MultiGetRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Multiget" class="extype" href="Multiget.html">Multiget</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Multiget#multiget_send" data-isabs="false">
+      <a id="multiget_send(String,String,Iterable[String],Iterable[String],Option[Boolean],Option[String],Option[Boolean],Option[Boolean]):ListenableActionFuture[MultiGetResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multiget_send</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="ids">ids: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String]</span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="preference">preference: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="realtime">realtime: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="refresh">refresh: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.get.MultiGetResponse" class="extype">MultiGetResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Multiget" class="extype" href="Multiget.html">Multiget</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Multisearch#multisearch" data-isabs="false">
+      <a id="multisearch(Iterable[SearchRequestBuilder]):MultiSearchResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multisearch</span><span class="params">(<span name="requests">requests: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<span name="org.elasticsearch.action.search.SearchRequestBuilder" class="extype">SearchRequestBuilder</span>] = <span class="symbol"><span class="name"><a href="Search.html#search_prepare(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Map[String, AnyRef]],Iterable[AbstractFacetBuilder],Iterable[String],Option[FilterBuilder],Option[Int],Highlight,Map[String, Float],Option[SearchSourceBuilder],Option[Float],Option[SearchOperationThreading],Iterable[PartialField],Option[String],Option[String],Option[String],Iterable[ScriptField],Option[String],Option[SearchType],Option[Int],Iterable[Sorting],Option[String],Iterable[String],Option[String],Option[Boolean]):SearchRequestBuilder">Seq(search_prepare())</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.search.MultiSearchResponse" class="extype">MultiSearchResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Multisearch" class="extype" href="Multisearch.html">Multisearch</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Multisearch#multisearchByQuery" data-isabs="false">
+      <a id="multisearchByQuery(Iterable[QueryBuilder]):MultiSearchResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multisearchByQuery</span><span class="params">(<span name="queries">queries: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span>] = <span class="symbol"><span class="name"><a href="../../../../org/package.html">Seq(matchAllQuery)</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.search.MultiSearchResponse" class="extype">MultiSearchResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Multisearch" class="extype" href="Multisearch.html">Multisearch</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Multisearch#multisearchByQuery_prepare" data-isabs="false">
+      <a id="multisearchByQuery_prepare(Iterable[QueryBuilder]):MultiSearchRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multisearchByQuery_prepare</span><span class="params">(<span name="queries">queries: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span>] = <span class="symbol"><span class="name"><a href="../../../../org/package.html">Seq(matchAllQuery)</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.search.MultiSearchRequestBuilder" class="extype">MultiSearchRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Multisearch" class="extype" href="Multisearch.html">Multisearch</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Multisearch#multisearchByQuery_send" data-isabs="false">
+      <a id="multisearchByQuery_send(Iterable[QueryBuilder]):ListenableActionFuture[MultiSearchResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multisearchByQuery_send</span><span class="params">(<span name="queries">queries: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span>] = <span class="symbol"><span class="name"><a href="../../../../org/package.html">Seq(matchAllQuery)</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.search.MultiSearchResponse" class="extype">MultiSearchResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Multisearch" class="extype" href="Multisearch.html">Multisearch</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Multisearch#multisearch_prepare" data-isabs="false">
+      <a id="multisearch_prepare(Iterable[SearchRequestBuilder]):MultiSearchRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multisearch_prepare</span><span class="params">(<span name="requests">requests: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<span name="org.elasticsearch.action.search.SearchRequestBuilder" class="extype">SearchRequestBuilder</span>] = <span class="symbol"><span class="name"><a href="Search.html#search_prepare(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Map[String, AnyRef]],Iterable[AbstractFacetBuilder],Iterable[String],Option[FilterBuilder],Option[Int],Highlight,Map[String, Float],Option[SearchSourceBuilder],Option[Float],Option[SearchOperationThreading],Iterable[PartialField],Option[String],Option[String],Option[String],Iterable[ScriptField],Option[String],Option[SearchType],Option[Int],Iterable[Sorting],Option[String],Iterable[String],Option[String],Option[Boolean]):SearchRequestBuilder">Seq(search_prepare())</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.search.MultiSearchRequestBuilder" class="extype">MultiSearchRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Multisearch" class="extype" href="Multisearch.html">Multisearch</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Multisearch#multisearch_send" data-isabs="false">
+      <a id="multisearch_send(Iterable[SearchRequestBuilder]):ListenableActionFuture[MultiSearchResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multisearch_send</span><span class="params">(<span name="requests">requests: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<span name="org.elasticsearch.action.search.SearchRequestBuilder" class="extype">SearchRequestBuilder</span>] = <span class="symbol"><span class="name"><a href="Search.html#search_prepare(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Map[String, AnyRef]],Iterable[AbstractFacetBuilder],Iterable[String],Option[FilterBuilder],Option[Int],Highlight,Map[String, Float],Option[SearchSourceBuilder],Option[Float],Option[SearchOperationThreading],Iterable[PartialField],Option[String],Option[String],Option[String],Iterable[ScriptField],Option[String],Option[SearchType],Option[Int],Iterable[Sorting],Option[String],Iterable[String],Option[String],Option[Boolean]):SearchRequestBuilder">Seq(search_prepare())</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.search.MultiSearchResponse" class="extype">MultiSearchResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Multisearch" class="extype" href="Multisearch.html">Multisearch</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Percolate#percolate" data-isabs="false">
+      <a id="percolate(String,String,Option[Boolean],Option[Boolean],Option[Boolean],Option[String]):PercolateResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">percolate</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="preferLocal">preferLocal: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="source">source: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.percolate.PercolateResponse" class="extype">PercolateResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Percolate" class="extype" href="Percolate.html">Percolate</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Percolate#percolate_prepare" data-isabs="false">
+      <a id="percolate_prepare(String,String,Option[Boolean],Option[Boolean],Option[Boolean],Option[String]):PercolateRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">percolate_prepare</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="preferLocal">preferLocal: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="source">source: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.percolate.PercolateRequestBuilder" class="extype">PercolateRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Percolate" class="extype" href="Percolate.html">Percolate</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Percolate#percolate_send" data-isabs="false">
+      <a id="percolate_send(String,String,Option[Boolean],Option[Boolean],Option[Boolean],Option[String]):ListenableActionFuture[PercolateResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">percolate_send</span><span class="params">(<span name="index">index: String</span>, <span name="type">type: String</span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreaded">operationThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="preferLocal">preferLocal: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="source">source: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.percolate.PercolateResponse" class="extype">PercolateResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Percolate" class="extype" href="Percolate.html">Percolate</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Query#query" data-isabs="false">
+      <a id="query(String):SearchResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">query</span><span class="params">(<span name="queryString">queryString: String</span>)</span><span class="result">: <span name="org.elasticsearch.action.search.SearchResponse" class="extype">SearchResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Query" class="extype" href="Query.html">Query</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Query#query_prepare" data-isabs="false">
+      <a id="query_prepare(String):SearchRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">query_prepare</span><span class="params">(<span name="queryString">queryString: String</span>)</span><span class="result">: <span name="org.elasticsearch.action.search.SearchRequestBuilder" class="extype">SearchRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Query" class="extype" href="Query.html">Query</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Query#query_send" data-isabs="false">
+      <a id="query_send(String):ListenableActionFuture[SearchResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">query_send</span><span class="params">(<span name="queryString">queryString: String</span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.search.SearchResponse" class="extype">SearchResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Query" class="extype" href="Query.html">Query</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Search#search" data-isabs="false">
+      <a id="search(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Map[String, AnyRef]],Iterable[AbstractFacetBuilder],Iterable[String],Option[FilterBuilder],Option[Int],Highlight,Map[String, Float],Option[SearchSourceBuilder],Option[Float],Option[SearchOperationThreading],Iterable[PartialField],Option[String],Option[String],Option[String],Iterable[ScriptField],Option[String],Option[SearchType],Option[Int],Iterable[Sorting],Option[String],Iterable[String],Option[String],Option[Boolean]):SearchResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">search</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="explain">explain: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="extraSource">extraSource: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.Map" class="extype">Map</span>[String, AnyRef]] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="facets">facets: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<span name="org.elasticsearch.search.facet.AbstractFacetBuilder" class="extype">AbstractFacetBuilder</span>] = <span class="symbol">Nil</span></span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="filter">filter: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.index.query.FilterBuilder" class="extype">FilterBuilder</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="from">from: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="highlight">highlight: <a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.Highlight" class="extype" href="SearchParameterTypes$$Highlight.html">Highlight</a> = <span class="symbol"><span class="name"><a href="SearchParameterTypes$.html">Highlight()</a></span></span></span>, <span name="indexBoosts">indexBoosts: <span name="scala.collection.Map" class="extype">Map</span>[String, <span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">Map()</a></span></span></span>, <span name="internalBuilder">internalBuilder: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.search.builder.SearchSourceBuilder" class="extype">SearchSourceBuilder</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minScore">minScore: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchOperationThreading" class="extype">SearchOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="partialFields">partialFields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.PartialField" class="extype" href="SearchParameterTypes$$PartialField.html">PartialField</a>] = <span class="symbol">Nil</span></span>, <span name="preference">preference: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="queryHint">queryHint: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="scriptFields">scriptFields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.ScriptField" class="extype" href="SearchParameterTypes$$ScriptField.html">ScriptField</a>] = <span class="symbol">Nil</span></span>, <span name="scroll">scroll: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchType">searchType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchType" class="extype">SearchType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="size">size: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="sortings">sortings: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.Sorting" class="extype" href="SearchParameterTypes$$Sorting.html">Sorting</a>] = <span class="symbol">Nil</span></span>, <span name="source">source: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="statsGroups">statsGroups: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="timeout">timeout: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="trackScores">trackScores: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.search.SearchResponse" class="extype">SearchResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Search" class="extype" href="Search.html">Search</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.SearchScroll#searchScroll" data-isabs="false">
+      <a id="searchScroll(String,Option[Boolean],Option[SearchOperationThreading],Option[String]):SearchResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">searchScroll</span><span class="params">(<span name="scrollId">scrollId: String</span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchOperationThreading" class="extype">SearchOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="scroll">scroll: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.search.SearchResponse" class="extype">SearchResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.SearchScroll" class="extype" href="SearchScroll.html">SearchScroll</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.SearchScroll#searchScroll_prepare" data-isabs="false">
+      <a id="searchScroll_prepare(String,Option[Boolean],Option[SearchOperationThreading],Option[String]):SearchScrollRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">searchScroll_prepare</span><span class="params">(<span name="scrollId">scrollId: String</span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchOperationThreading" class="extype">SearchOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="scroll">scroll: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.search.SearchScrollRequestBuilder" class="extype">SearchScrollRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.SearchScroll" class="extype" href="SearchScroll.html">SearchScroll</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.SearchScroll#searchScroll_send" data-isabs="false">
+      <a id="searchScroll_send(String,Option[Boolean],Option[SearchOperationThreading],Option[String]):ListenableActionFuture[SearchResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">searchScroll_send</span><span class="params">(<span name="scrollId">scrollId: String</span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchOperationThreading" class="extype">SearchOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="scroll">scroll: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.search.SearchResponse" class="extype">SearchResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.SearchScroll" class="extype" href="SearchScroll.html">SearchScroll</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Search#search_prepare" data-isabs="false">
+      <a id="search_prepare(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Map[String, AnyRef]],Iterable[AbstractFacetBuilder],Iterable[String],Option[FilterBuilder],Option[Int],Highlight,Map[String, Float],Option[SearchSourceBuilder],Option[Float],Option[SearchOperationThreading],Iterable[PartialField],Option[String],Option[String],Option[String],Iterable[ScriptField],Option[String],Option[SearchType],Option[Int],Iterable[Sorting],Option[String],Iterable[String],Option[String],Option[Boolean]):SearchRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">search_prepare</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="explain">explain: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="extraSource">extraSource: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.Map" class="extype">Map</span>[String, AnyRef]] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="facets">facets: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<span name="org.elasticsearch.search.facet.AbstractFacetBuilder" class="extype">AbstractFacetBuilder</span>] = <span class="symbol">Nil</span></span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="filter">filter: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.index.query.FilterBuilder" class="extype">FilterBuilder</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="from">from: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="highlight">highlight: <a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.Highlight" class="extype" href="SearchParameterTypes$$Highlight.html">Highlight</a> = <span class="symbol"><span class="name"><a href="SearchParameterTypes$.html">Highlight()</a></span></span></span>, <span name="indexBoosts">indexBoosts: <span name="scala.collection.Map" class="extype">Map</span>[String, <span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">Map()</a></span></span></span>, <span name="internalBuilder">internalBuilder: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.search.builder.SearchSourceBuilder" class="extype">SearchSourceBuilder</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minScore">minScore: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchOperationThreading" class="extype">SearchOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="partialFields">partialFields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.PartialField" class="extype" href="SearchParameterTypes$$PartialField.html">PartialField</a>] = <span class="symbol">Nil</span></span>, <span name="preference">preference: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="queryHint">queryHint: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="scriptFields">scriptFields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.ScriptField" class="extype" href="SearchParameterTypes$$ScriptField.html">ScriptField</a>] = <span class="symbol">Nil</span></span>, <span name="scroll">scroll: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchType">searchType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchType" class="extype">SearchType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="size">size: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="sortings">sortings: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.Sorting" class="extype" href="SearchParameterTypes$$Sorting.html">Sorting</a>] = <span class="symbol">Nil</span></span>, <span name="source">source: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="statsGroups">statsGroups: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="timeout">timeout: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="trackScores">trackScores: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.search.SearchRequestBuilder" class="extype">SearchRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Search" class="extype" href="Search.html">Search</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.Search#search_send" data-isabs="false">
+      <a id="search_send(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Map[String, AnyRef]],Iterable[AbstractFacetBuilder],Iterable[String],Option[FilterBuilder],Option[Int],Highlight,Map[String, Float],Option[SearchSourceBuilder],Option[Float],Option[SearchOperationThreading],Iterable[PartialField],Option[String],Option[String],Option[String],Iterable[ScriptField],Option[String],Option[SearchType],Option[Int],Iterable[Sorting],Option[String],Iterable[String],Option[String],Option[Boolean]):ListenableActionFuture[SearchResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">search_send</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="explain">explain: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="extraSource">extraSource: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.Map" class="extype">Map</span>[String, AnyRef]] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="facets">facets: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<span name="org.elasticsearch.search.facet.AbstractFacetBuilder" class="extype">AbstractFacetBuilder</span>] = <span class="symbol">Nil</span></span>, <span name="fields">fields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="filter">filter: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.index.query.FilterBuilder" class="extype">FilterBuilder</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="from">from: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="highlight">highlight: <a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.Highlight" class="extype" href="SearchParameterTypes$$Highlight.html">Highlight</a> = <span class="symbol"><span class="name"><a href="SearchParameterTypes$.html">Highlight()</a></span></span></span>, <span name="indexBoosts">indexBoosts: <span name="scala.collection.Map" class="extype">Map</span>[String, <span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">Map()</a></span></span></span>, <span name="internalBuilder">internalBuilder: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.search.builder.SearchSourceBuilder" class="extype">SearchSourceBuilder</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="minScore">minScore: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Float" class="extype">Float</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchOperationThreading" class="extype">SearchOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="partialFields">partialFields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.PartialField" class="extype" href="SearchParameterTypes$$PartialField.html">PartialField</a>] = <span class="symbol">Nil</span></span>, <span name="preference">preference: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="queryHint">queryHint: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="routing">routing: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="scriptFields">scriptFields: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.ScriptField" class="extype" href="SearchParameterTypes$$ScriptField.html">ScriptField</a>] = <span class="symbol">Nil</span></span>, <span name="scroll">scroll: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="searchType">searchType: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.search.SearchType" class="extype">SearchType</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="size">size: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Int" class="extype">Int</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="sortings">sortings: <span name="scala.collection.Iterable" class="extype">Iterable</span>[<a name="com.traackr.scalastic.elasticsearch.SearchParameterTypes.Sorting" class="extype" href="SearchParameterTypes$$Sorting.html">Sorting</a>] = <span class="symbol">Nil</span></span>, <span name="source">source: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="statsGroups">statsGroups: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="timeout">timeout: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="trackScores">trackScores: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.search.SearchResponse" class="extype">SearchResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.Search" class="extype" href="Search.html">Search</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
+      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.ValidateQuery#validateQuery" data-isabs="false">
+      <a id="validateQuery(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Boolean],Option[BroadcastOperationThreading]):ValidateQueryResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">validateQuery</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="explain">explain: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.broadcast.BroadcastOperationThreading" class="extype">BroadcastOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.admin.indices.validate.query.ValidateQueryResponse" class="extype">ValidateQueryResponse</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.ValidateQuery" class="extype" href="ValidateQuery.html">ValidateQuery</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.ValidateQuery#validateQuery_prepare" data-isabs="false">
+      <a id="validateQuery_prepare(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Boolean],Option[BroadcastOperationThreading]):ValidateQueryRequestBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">validateQuery_prepare</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="explain">explain: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.broadcast.BroadcastOperationThreading" class="extype">BroadcastOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.admin.indices.validate.query.ValidateQueryRequestBuilder" class="extype">ValidateQueryRequestBuilder</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.ValidateQuery" class="extype" href="ValidateQuery.html">ValidateQuery</a></dd></dl></div>
+    </li><li visbl="pub" name="com.traackr.scalastic.elasticsearch.ValidateQuery#validateQuery_send" data-isabs="false">
+      <a id="validateQuery_send(Iterable[String],Iterable[String],QueryBuilder,Option[Boolean],Option[Boolean],Option[BroadcastOperationThreading]):ListenableActionFuture[ValidateQueryResponse]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">validateQuery_send</span><span class="params">(<span name="indices">indices: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="types">types: <span name="scala.collection.Iterable" class="extype">Iterable</span>[String] = <span class="symbol">Nil</span></span>, <span name="query">query: <span name="org.elasticsearch.index.query.QueryBuilder" class="extype">QueryBuilder</span> = <span class="symbol"><span class="name"><a href="../../../../org/package.html">matchAllQuery</a></span></span></span>, <span name="explain">explain: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="listenerThreaded">listenerThreaded: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>, <span name="operationThreading">operationThreading: <span name="scala.Option" class="extype">Option</span>[<span name="org.elasticsearch.action.support.broadcast.BroadcastOperationThreading" class="extype">BroadcastOperationThreading</span>] = <span class="symbol"><span class="name"><a href="../../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="org.elasticsearch.action.ListenableActionFuture" class="extype">ListenableActionFuture</span>[<span name="org.elasticsearch.action.admin.indices.validate.query.ValidateQueryResponse" class="extype">ValidateQueryResponse</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.traackr.scalastic.elasticsearch.ValidateQuery" class="extype" href="ValidateQuery.html">ValidateQuery</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div name="com.traackr.scalastic.elasticsearch.DeleteByQuery" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.DeleteByQuery" class="extype" href="DeleteByQuery.html">DeleteByQuery</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Delete" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Delete" class="extype" href="Delete.html">Delete</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Multiget" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Multiget" class="extype" href="Multiget.html">Multiget</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Get" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Get" class="extype" href="Get.html">Get</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Count" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Count" class="extype" href="Count.html">Count</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Searching" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Searching" class="extype" href="Searching.html">Searching</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.ValidateQuery" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.ValidateQuery" class="extype" href="ValidateQuery.html">ValidateQuery</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Percolate" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Percolate" class="extype" href="Percolate.html">Percolate</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Multisearch" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Multisearch" class="extype" href="Multisearch.html">Multisearch</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.MoreLikeThis" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.MoreLikeThis" class="extype" href="MoreLikeThis.html">MoreLikeThis</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.SearchScroll" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.SearchScroll" class="extype" href="SearchScroll.html">SearchScroll</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Search" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Search" class="extype" href="Search.html">Search</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Query" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Query" class="extype" href="Query.html">Query</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Bulk" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Bulk" class="extype" href="Bulk.html">Bulk</a></h3>
+            </div><div name="com.traackr.scalastic.elasticsearch.Index" class="parent">
+              <h3>Inherited from <a name="com.traackr.scalastic.elasticsearch.Index" class="extype" href="Index.html">Index</a></h3>
+            </div><div name="scala.AnyRef" class="parent">
+              <h3>Inherited from AnyRef</h3>
+            </div><div name="scala.Any" class="parent">
+              <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
