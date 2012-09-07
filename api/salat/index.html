@@ -27,7 +27,8 @@
 
 <script type="text/javascript">
     (function($) {
-       $("#whole-page").css("hegith", $("body").height() - $("#menubar").height());
+       $("body").height("100%");
+       $("#whole-page").height($("body").height() - $("#menubar").height());
        $("#core").click(function() {
           $("#whole-page").attr("src","core/index.html");
        });
