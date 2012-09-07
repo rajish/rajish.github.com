@@ -84,10 +84,16 @@ h1.title {
 #menu-bar a {
     margin-left: 20px;
     color: white;
+    cursor: pointer;
 }
 
 #menu-bar {
     background-color: grey;
+}
+
+.current {
+    background: lightgrey;
+    color: black;
 }
 
 iframe {

@@ -19,7 +19,7 @@
 <body>
     <nav id="menu-bar">
         <a href="/">home</a>
-        <a id="deadrope">deadrope</a>
+        <a id="deadrope" class="current">deadrope</a>
         <a id="elastic">elasticsearch</a>
         <a id="scalastic">scalastic</a>
         <a href="salat">salat</a>
@@ -35,14 +35,20 @@
 
        $("#deadrope").click(function() {
           $("#whole-page").attr("src","deadrope/0.1-SNAPSHOT/index.html");
+          $(".current").removeClass("current");
+          $("#deadrope").addClass("current");
        });
 
        $("#elastic").click(function() {
           $("#whole-page").attr("src","elasticsearch/0.20.0.Beta1-SNAPSHOT/index.html");
+          $(".current").removeClass("current");
+          $("#elastic").addClass("current");
        });
 
        $("#scalastic").click(function() {
           $("#whole-page").attr("src","scalastic/0.0.6-SNAPSHOT/index.html");
+          $(".current").removeClass("current");
+          $("#scalastic").addClass("current");
        });
     })(jQuery);
 </script>

@@ -20,7 +20,7 @@
     <nav id="menu-bar">
         <a href="/">home</a>
         <a href="/api">API</a>
-        <a id="core">salat-core</a>
+        <a id="core" class="current">salat-core</a>
         <a id="util">salat-util</a>
     </nav>
     <iframe id="whole-page" seamless src="core/index.html">
@@ -33,9 +33,13 @@
        $("#whole-page").height($("body").height() - $("#menubar").height());
        $("#core").click(function() {
           $("#whole-page").attr("src","core/index.html");
+          $(".current").removeClass("current");
+          $("#core").addClass("current");
        });
        $("#util").click(function() {
           $("#whole-page").attr("src","utils/index.html");
+          $(".current").removeClass("current");
+          $("#util").addClass("current");
        });
 
     })(jQuery);
