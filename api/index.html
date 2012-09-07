@@ -19,11 +19,12 @@
 <body>
     <nav id="menu-bar">
         <a href="/">home</a>
-        <a href="/api">API</a>
-        <a id="core">salat-core</a>
-        <a id="util">salat-util</a>
+        <a id="deadrope">deadrope</a>
+        <a id="elastic">elasticsearch</a>
+        <a id="scalastic">scalastic</a>
+        <a href="salat">salat</a>
     </nav>
-    <iframe id="whole-page" seamless src="core/index.html">
+    <iframe id="whole-page" seamless src="deadrope/0.1-SNAPSHOT/index.html">
     </iframe>
 </body>
 
@@ -31,13 +32,18 @@
     (function($) {
        $("body").height("100%");
        $("#whole-page").height($("body").height() - $("#menubar").height());
-       $("#core").click(function() {
-          $("#whole-page").attr("src","core/index.html");
-       });
-       $("#util").click(function() {
-          $("#whole-page").attr("src","utils/index.html");
+
+       $("#deadrope").click(function() {
+          $("#whole-page").attr("src","deadrope/0.1-SNAPSHOT/index.html");
        });
 
+       $("#elastic").click(function() {
+          $("#whole-page").attr("src","elasticsearch/0.20.0.Beta1-SNAPSHOT/index.html");
+       });
+
+       $("#scalastic").click(function() {
+          $("#whole-page").attr("src","scalastic/0.0.6-SNAPSHOT/index.html");
+       });
     })(jQuery);
 </script>
 </html>
