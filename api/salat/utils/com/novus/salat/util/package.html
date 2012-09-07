@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>com.novus.salat.util</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+      <div id="definition">
+        <img src="../../../../lib/package_big.png" />
+        <p id="owner"><a name="com" class="extype" href="../../../package.html">com</a>.<a name="com.novus" class="extype" href="../../package.html">novus</a>.<a name="com.novus.salat" class="extype" href="../package.html">salat</a></p>
+        <h1>util</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">util</span>
+      </span>
+      </h4>
+      
+      <div class="fullcommenttop" id="comment"></div>
+    
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="com.novus.salat.util.AsyncSalatRunnable" data-isabs="false">
+      <a id="AsyncSalatRunnable:AsyncSalatRunnable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AsyncSalatRunnable.html"><span class="name">AsyncSalatRunnable</span></a><span class="result"> extends Runnable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Helper class for running Salat with Android.</p>
+    </li><li visbl="prt" name="com.novus.salat.util.Logger" data-isabs="false">
+      <a id="Logger:Logger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Logger.html"><span class="name">Logger</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Scala SLF4J wrapper</p>
+    </li><li visbl="prt" name="com.novus.salat.util.Logging" data-isabs="true">
+      <a id="Logging:Logging"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Logging.html"><span class="name">Logging</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base trait for all classes that wants to be able use the logging infrastructure.</p>
+    </li><li visbl="pub" name="com.novus.salat.util.MissingCaseObjectOverride" data-isabs="false">
+      <a id="MissingCaseObjectOverride:MissingCaseObjectOverride"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MissingCaseObjectOverride.html"><span class="name">MissingCaseObjectOverride</span></a><span class="params">(<span name="path">path: String</span>, <span name="value">value: Any</span>, <span name="ctxName">ctxName: String</span>)</span><span class="result"> extends Error with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="com.novus.salat.util.MissingConstructor" data-isabs="false">
+      <a id="MissingConstructor:MissingConstructor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MissingConstructor.html"><span class="name">MissingConstructor</span></a><span class="params">(<span name="clazz">clazz: Class[_]</span>)</span><span class="result"> extends Error with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Runtime error indicating that Salat can't identify any constructor for this class.</p>
+    </li><li visbl="pub" name="com.novus.salat.util.MissingExpectedType" data-isabs="false">
+      <a id="MissingExpectedType:MissingExpectedType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MissingExpectedType.html"><span class="name">MissingExpectedType</span></a><span class="params">(<span name="clazz">clazz: Class[_]</span>)</span><span class="result"> extends Error with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Runtime error indicating that class' pickled Scala signature does not define any top-level classes or objects.</p>
+    </li><li visbl="pub" name="com.novus.salat.util.MissingPickledSig" data-isabs="false">
+      <a id="MissingPickledSig:MissingPickledSig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MissingPickledSig.html"><span class="name">MissingPickledSig</span></a><span class="params">(<span name="clazz">clazz: Class[_]</span>)</span><span class="result"> extends Error with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Runtime error indicating that Salat can't find the pickled Scala signature for this class.</p>
+    </li><li visbl="pub" name="com.novus.salat.util.TooManyConstructorsWithArgs" data-isabs="false">
+      <a id="TooManyConstructorsWithArgs:TooManyConstructorsWithArgs[X]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TooManyConstructorsWithArgs.html"><span class="name">TooManyConstructorsWithArgs</span></a><span class="tparams">[<span name="X">X</span>]</span><span class="params">(<span name="clazz">clazz: Class[X]</span>, <span name="cl">cl: List[Constructor[X]]</span>)</span><span class="result"> extends Error with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Runtime error indicating that a class defines more than one constructor with args.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="com.novus.salat.util.BestAvailableConstructor" data-isabs="false">
+      <a id="BestAvailableConstructor:BestAvailableConstructor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BestAvailableConstructor$.html"><span class="name">BestAvailableConstructor</span></a><span class="result"> extends Logging</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Given multiple contructors, attempt to determine the best available constructor for instantiating the class.</p>
+    </li><li visbl="pub" name="com.novus.salat.util.package#DefaultSalatStackSize" data-isabs="false">
+      <a id="DefaultSalatStackSize:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DefaultSalatStackSize</span><span class="result">: <span name="scala.Long" class="extype">Long</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="com.novus.salat.util.package#EmptyPlaceholder" data-isabs="false">
+      <a id="EmptyPlaceholder:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EmptyPlaceholder</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="prt" name="com.novus.salat.util.Logger" data-isabs="false">
+      <a id="Logger:Logger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Logger$.html"><span class="name">Logger</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Logger factory</p>
+    </li><li visbl="pub" name="com.novus.salat.util.package#MissingPlaceholder" data-isabs="false">
+      <a id="MissingPlaceholder:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MissingPlaceholder</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="com.novus.salat.util.package#NonePlaceholder" data-isabs="false">
+      <a id="NonePlaceholder:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NonePlaceholder</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="com.novus.salat.util.package#NullPlaceholder" data-isabs="false">
+      <a id="NullPlaceholder:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NullPlaceholder</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="com.novus.salat.util.package#OptionalMissingPlaceholder" data-isabs="false">
+      <a id="OptionalMissingPlaceholder:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">OptionalMissingPlaceholder</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="com.novus.salat.util.package#QuestionPlaceholder" data-isabs="false">
+      <a id="QuestionPlaceholder:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">QuestionPlaceholder</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="com.novus.salat.util.SalatDAOUtils" data-isabs="false">
+      <a id="SalatDAOUtils:SalatDAOUtils"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SalatDAOUtils$.html"><span class="name">SalatDAOUtils</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Some useful utilities for extracting a single result from a list of results.</p>
+    </li><li visbl="pub" name="com.novus.salat.util.package#SalatThreads" data-isabs="false">
+      <a id="SalatThreads:ThreadGroup"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SalatThreads</span><span class="result">: <span name="java.lang.ThreadGroup" class="extype">ThreadGroup</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="prt" name="com.novus.salat.util.ScalaSigUtil" data-isabs="false">
+      <a id="ScalaSigUtil:ScalaSigUtil"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ScalaSigUtil$.html"><span class="name">ScalaSigUtil</span></a><span class="result"> extends Logging</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="com.novus.salat" class="extype" href="../package.html">salat</a>] </dd></dl></div>
+    </li><li visbl="pub" name="com.novus.salat.util.package#asyncSalat" data-isabs="false">
+      <a id="asyncSalat[T](Long)(⇒ T):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asyncSalat</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="stackSize">stackSize: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="params">(<span name="f">f: ⇒ T</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="com.novus.salat.util.package#asyncSalat" data-isabs="false">
+      <a id="asyncSalat[T](⇒ T):T"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asyncSalat</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="f">f: ⇒ T</span>)</span><span class="result">: T</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="com.novus.salat.util.encoding" data-isabs="false">
+      <a id="encoding:encoding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="encoding/package.html"><span class="name">encoding</span></a>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="com.novus.salat.util.package#reflectFields" data-isabs="false">
+      <a id="reflectFields(Product):Map[Any, Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reflectFields</span><span class="params">(<span name="x">x: <span name="scala.Product" class="extype">Product</span></span>)</span><span class="result">: Map[<span name="scala.Any" class="extype">Any</span>, <span name="scala.Any" class="extype">Any</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="prt" name="com.novus.salat.util.package#resolveClass" data-isabs="false">
+      <a id="resolveClass[X&lt;:AnyRef](String,Iterable[ClassLoader]):Option[Class[X]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">resolveClass</span><span class="tparams">[<span name="X">X &lt;: AnyRef</span>]</span><span class="params">(<span name="c">c: String</span>, <span name="classLoaders">classLoaders: Iterable[<span name="java.lang.ClassLoader" class="extype">ClassLoader</span>]</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[Class[X]]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="com.novus.salat" class="extype" href="../package.html">salat</a>] </dd><dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="prt" name="com.novus.salat.util.package#resolveClass_!" data-isabs="false">
+      <a id="resolveClass_!(String,Iterable[ClassLoader]):Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: resolveClass_$bang">resolveClass_!</span><span class="params">(<span name="c">c: String</span>, <span name="classLoaders">classLoaders: Iterable[<span name="java.lang.ClassLoader" class="extype">ClassLoader</span>]</span>)</span><span class="result">: Class[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="com.novus.salat" class="extype" href="../package.html">salat</a>] </dd><dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="prt" name="com.novus.salat.util.package#toUsableClassName" data-isabs="false">
+      <a id="toUsableClassName(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toUsableClassName</span><span class="params">(<span name="clazz">clazz: String</span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="com.novus.salat" class="extype" href="../package.html">salat</a>] </dd><dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="com.novus.salat.util.package#truncate" data-isabs="false">
+      <a id="truncate(AnyRef,Int):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">truncate</span><span class="params">(<span name="a">a: AnyRef</span>, <span name="l">l: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">100</span></span>)</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

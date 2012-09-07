@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="/stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="/stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/javascripts/script.js"></script>
+
+  <title>rajish.github.com</title>
+  <meta name="description" content="A maven and API docs home.">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+    <nav id="menu-bar">
+        <a id="core">salat-core</a>
+        <a id="util">salat-util</a>
+    </nav>
+    <iframe id="whole-page" seamless src="core/index.html">
+    </iframe>
+</body>
+
+<script type="text/javascript">
+    (function($) {
+       $("#whole-page").css("hegith", $("body").height() - $("#menubar").height());
+       $("#core").click(function() {
+          $("#whole-page").attr("src","core/index.html");
+       });
+       $("#util").click(function() {
+          $("#whole-page").attr("src","utils/index.html");
+       });
+
+    })(jQuery);
+</script>
+</html>
