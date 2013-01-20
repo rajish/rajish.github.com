@@ -2,68 +2,93 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>com.novus.salat.dao.ModelCompanion</title>
+          <title>ModelCompanion - com.novus.salat.dao.ModelCompanion</title>
+          <meta name="description" content="ModelCompanion - com.novus.salat.dao.ModelCompanion" />
+          <meta name="keywords" content="ModelCompanion com.novus.salat.dao.ModelCompanion" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'com.novus.salat.dao.ModelCompanion';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
+        <body class="type">
       <div id="definition">
         <img src="../../../../lib/trait_big.png" />
-        <p id="owner"><a name="com" class="extype" href="../../../package.html">com</a>.<a name="com.novus" class="extype" href="../../package.html">novus</a>.<a name="com.novus.salat" class="extype" href="../package.html">salat</a>.<a name="com.novus.salat.dao" class="extype" href="package.html">dao</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.novus">novus</a>.<a href="../package.html" class="extype" name="com.novus.salat">salat</a>.<a href="package.html" class="extype" name="com.novus.salat.dao">dao</a></p>
         <h1>ModelCompanion</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">ModelCompanion</span><span class="tparams">[<span name="ObjectType">ObjectType &lt;: AnyRef</span>, <span name="ID">ID</span>]</span><span class="result"> extends <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a>[ObjectType, ID] with <span name="com.novus.salat.util.Logging" class="extype">Logging</span></span>
+        <span class="name">ModelCompanion</span><span class="tparams">[<span name="ObjectType">ObjectType &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="ID">ID</span>]</span><span class="result"> extends <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>, <span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>] with <span class="extype" name="com.novus.salat.util.Logging">Logging</span></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Play framework style model companion</p><pre>
-  <span class="kw">package</span> model
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Play framework style model companion</p><pre><span class="kw">package</span> model
 
- <span class="kw">import</span> com.novus.salat.annotations._
- <span class="kw">import</span> com.mongodb.casbah.Imports._
- <span class="kw">import</span> com.novus.salat.dao.{ SalatDAO, ModelCompanion }
+<span class="kw">import</span> com.novus.salat.annotations._
+<span class="kw">import</span> com.mongodb.casbah.Imports._
+<span class="kw">import</span> com.novus.salat.dao.{ SalatDAO, ModelCompanion }
 
- <span class="kw">object</span> MyModel <span class="kw">extends</span> ModelCompanion[MyModel, ObjectId] {
-   <span class="kw">val</span> collection = MongoConnection()(<span class="lit">"my_db"</span>)(<span class="lit">"my_model_coll"</span>)
-   <span class="kw">val</span> dao = <span class="kw">new</span> SalatDAO[MyModel, ObjectId](collection = collection) {}
- }
+<span class="kw">object</span> MyModel <span class="kw">extends</span> ModelCompanion[MyModel, ObjectId] {
+  <span class="kw">val</span> collection = MongoConnection()(<span class="lit">"my_db"</span>)(<span class="lit">"my_model_coll"</span>)
+  <span class="kw">val</span> dao = <span class="kw">new</span> SalatDAO[MyModel, ObjectId](collection = collection) {}
+}
 
- <span class="kw">case</span> <span class="kw">class</span> MyModel(@Key(<span class="lit">"_id"</span>) id: ObjectId,
-                    x: <span class="std">String</span>,
-                    y: <span class="std">Int</span>,
-                    z: <span class="std">List</span>[<span class="std">Double</span>])
-</pre></div><dl class="paramcmts block"><dt class="tparam">ObjectType</dt><dd class="cmt"><p>type of object to be serialized</p></dd><dt class="tparam">ID</dt><dd class="cmt"><p>type of object id to be serialized
+<span class="kw">case</span> <span class="kw">class</span> MyModel(@Key(<span class="lit">"_id"</span>) id: ObjectId,
+                   x: <span class="std">String</span>,
+                   y: <span class="std">Int</span>,
+                   z: <span class="std">List</span>[<span class="std">Double</span>])</pre></div><dl class="paramcmts block"><dt class="tparam">ObjectType</dt><dd class="cmt"><p>type of object to be serialized</p></dd><dt class="tparam">ID</dt><dd class="cmt"><p>type of object id to be serialized
 </p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="com.novus.salat.util.Logging" class="extype">Logging</span>, <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a>[ObjectType, ID], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="com.novus.salat.util.Logging">Logging</span>, <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>, <span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
-    
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
         <div id="order">
               <span class="filtertype">Ordering</span>
-              <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
             </div>
         <div id="ancestors">
-              <span class="filtertype">Inherited</span>
-              <ol><li class="hideall out"><span>Hide All</span></li>
-              <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="com.novus.salat.dao.ModelCompanion" class="in"><span>ModelCompanion</span></li><li name="com.novus.salat.util.Logging" class="in"><span>Logging</span></li><li name="com.novus.salat.dao.BaseDAOMethods" class="in"><span>BaseDAOMethods</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
-            </div>
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="com.novus.salat.dao.ModelCompanion"><span>ModelCompanion</span></li><li class="in" name="com.novus.salat.util.Logging"><span>Logging</span></li><li class="in" name="com.novus.salat.dao.BaseDAOMethods"><span>BaseDAOMethods</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
             <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
@@ -76,26 +101,28 @@
 
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#dao" data-isabs="true">
-      <a id="dao:DAO[ObjectType, ID]"></a>
+              <ol><li name="com.novus.salat.dao.ModelCompanion#dao" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="dao:com.novus.salat.dao.DAO[ObjectType,ID]"></a>
+      <a id="dao:DAO[ObjectType,ID]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dao</span><span class="result">: <a name="com.novus.salat.dao.DAO" class="extype" href="DAO.html">DAO</a>[ObjectType, ID]</span>
+        <span class="name">dao</span><span class="result">: <a href="DAO.html" class="extype" name="com.novus.salat.dao.DAO">DAO</a>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>, <span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>]</span>
       </span>
       </h4>
       
     </li></ol>
             </div>
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Concrete Value Members</h3>
-              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -103,11 +130,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -115,11 +143,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
       <a id="##():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -127,11 +156,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name" title="gt4s: $hash$hash">##</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
       <a id="==(AnyRef):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -139,11 +169,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -151,11 +182,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -163,11 +195,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: T0</span>
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -175,27 +208,29 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#count" data-isabs="false">
-      <a id="count(DBObject,List[String],List[String]):Long"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion#count" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="count(q:com.mongodb.casbah.Imports.DBObject,fieldsThatMustExist:List[String],fieldsThatMustNotExist:List[String]):Long"></a>
+      <a id="count(mongodb.casbah.Imports.DBObject,List[String],List[String]):Long"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">count</span><span class="params">(<span name="q">q: DBObject</span>, <span name="fieldsThatMustExist">fieldsThatMustExist: List[String] = <span class="symbol">Nil</span></span>, <span name="fieldsThatMustNotExist">fieldsThatMustNotExist: List[String] = <span class="symbol">Nil</span></span>)</span><span class="result">: <span name="scala.Long" class="extype">Long</span></span>
+        <span class="name">count</span><span class="params">(<span name="q">q: <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>, <span name="fieldsThatMustExist">fieldsThatMustExist: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Nil</span></span>, <span name="fieldsThatMustNotExist">fieldsThatMustNotExist: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Nil</span></span>)</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Count the number of documents matching the search criteria.</p><div class="fullcomment"><div class="comment cmt"><p>Count the number of documents matching the search criteria.</p></div><dl class="paramcmts block"><dt class="param">q</dt><dd class="cmt"><p>object for which to search</p></dd><dt class="param">fieldsThatMustExist</dt><dd class="cmt"><p>list of field keys that must exist</p></dd><dt class="param">fieldsThatMustNotExist</dt><dd class="cmt"><p>list of field keys that must not exist</p></dd><dt>returns</dt><dd class="cmt"><p>count of documents matching the search criteria
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#defaultWriteConcern" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#defaultWriteConcern" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="defaultWriteConcern:com.mongodb.WriteConcern"></a>
       <a id="defaultWriteConcern:WriteConcern"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -203,12 +238,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">defaultWriteConcern</span><span class="result">: <span name="com.mongodb.WriteConcern" class="extype">WriteConcern</span></span>
+        <span class="name">defaultWriteConcern</span><span class="result">: <span class="extype" name="com.mongodb.WriteConcern">WriteConcern</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">In the absence of a specified write concern, supplies a default write concern.</p><div class="fullcomment"><div class="comment cmt"><p>In the absence of a specified write concern, supplies a default write concern.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>default write concern to use for insert, update, save and remove operations
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -216,11 +252,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -228,11 +265,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -240,40 +278,43 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#find" data-isabs="false">
-      <a id="find[A, B](A,B)((A) ⇒ DBObject,(B) ⇒ DBObject):SalatMongoCursor[ObjectType]"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion#find" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="find[A,B](ref:A,keys:B)(implicitevidence$1:A=&gt;com.mongodb.casbah.Imports.DBObject,implicitevidence$2:B=&gt;com.mongodb.casbah.Imports.DBObject):com.novus.salat.dao.SalatMongoCursor[ObjectType]"></a>
+      <a id="find[A,B](A,B)((A)⇒mongodb.casbah.Imports.DBObject,(B)⇒mongodb.casbah.Imports.DBObject):SalatMongoCursor[ObjectType]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">find</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="ref">ref: A</span>, <span name="keys">keys: B</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (A) ⇒ DBObject</span>, <span name="arg1">arg1: (B) ⇒ DBObject</span>)</span><span class="result">: <a name="com.novus.salat.dao.SalatMongoCursor" class="extype" href="SalatMongoCursor.html">SalatMongoCursor</a>[ObjectType]</span>
+        <span class="name">find</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="ref">ref: <span class="extype" name="com.novus.salat.dao.ModelCompanion.find.A">A</span></span>, <span name="keys">keys: <span class="extype" name="com.novus.salat.dao.ModelCompanion.find.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="com.novus.salat.dao.ModelCompanion.find.A">A</span>) ⇒ <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>, <span name="arg1">arg1: (<span class="extype" name="com.novus.salat.dao.ModelCompanion.find.B">B</span>) ⇒ <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>)</span><span class="result">: <a href="SalatMongoCursor.html" class="extype" name="com.novus.salat.dao.SalatMongoCursor">SalatMongoCursor</a>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type view bound to DBObject</p></dd><dt class="tparam">B</dt><dd class="cmt"><p>type view bound to DBObject</p></dd><dt class="param">ref</dt><dd class="cmt"><p>object for which to search</p></dd><dt class="param">keys</dt><dd class="cmt"><p>fields to return</p></dd><dt>returns</dt><dd class="cmt"><p>a typed cursor to iterate over results
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.BaseDAOMethods#find" data-isabs="false">
-      <a id="find[A](A)((A) ⇒ DBObject):SalatMongoCursor[ObjectType]"></a>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.BaseDAOMethods#find" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="find[A](ref:A)(implicitevidence$2:A=&gt;com.mongodb.DBObject):com.novus.salat.dao.SalatMongoCursor[ObjectType]"></a>
+      <a id="find[A](A)((A)⇒DBObject):SalatMongoCursor[ObjectType]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">find</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ref">ref: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (A) ⇒ <span name="com.mongodb.DBObject" class="extype">DBObject</span></span>)</span><span class="result">: <a name="com.novus.salat.dao.SalatMongoCursor" class="extype" href="SalatMongoCursor.html">SalatMongoCursor</a>[ObjectType]</span>
+        <span class="name">find</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ref">ref: <span class="extype" name="com.novus.salat.dao.BaseDAOMethods.find.A">A</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="com.novus.salat.dao.BaseDAOMethods.find.A">A</span>) ⇒ <span class="extype" name="com.mongodb.DBObject">DBObject</span></span>)</span><span class="result">: <a href="SalatMongoCursor.html" class="extype" name="com.novus.salat.dao.SalatMongoCursor">SalatMongoCursor</a>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Queries for an object in this collection.</p><div class="fullcomment"><div class="comment cmt"><p>Queries for an object in this collection.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type view bound to DBObject</p></dd><dt class="param">ref</dt><dd class="cmt"><p>object for which to search</p></dd><dt>returns</dt><dd class="cmt"><p>a typed cursor to iterate over results
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#findAll" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#findAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="findAll():com.novus.salat.dao.SalatMongoCursor[ObjectType]"></a>
       <a id="findAll():SalatMongoCursor[ObjectType]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -281,25 +322,27 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">findAll</span><span class="params">()</span><span class="result">: <a name="com.novus.salat.dao.SalatMongoCursor" class="extype" href="SalatMongoCursor.html">SalatMongoCursor</a>[ObjectType]</span>
+        <span class="name">findAll</span><span class="params">()</span><span class="result">: <a href="SalatMongoCursor.html" class="extype" name="com.novus.salat.dao.SalatMongoCursor">SalatMongoCursor</a>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>(Iterator[ObjectType]) iterable result cursor of everything in the collection
 </p></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#findOne" data-isabs="false">
-      <a id="findOne[A](A)((A) ⇒ DBObject):Option[ObjectType]"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion#findOne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="findOne[A](t:A)(implicitevidence$3:A=&gt;com.mongodb.casbah.Imports.DBObject):Option[ObjectType]"></a>
+      <a id="findOne[A](A)((A)⇒mongodb.casbah.Imports.DBObject):Option[ObjectType]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">findOne</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="t">t: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (A) ⇒ DBObject</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[ObjectType]</span>
+        <span class="name">findOne</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.findOne.A">A</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="com.novus.salat.dao.ModelCompanion.findOne.A">A</span>) ⇒ <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type view bound to DBObject</p></dd><dt class="param">t</dt><dd class="cmt"><p>object for which to search</p></dd><dt>returns</dt><dd class="cmt"><p>(Option[ObjectType]) Some() of the object found, or <code>None</code> if no such object exists
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#findOneById" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#findOneById" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="findOneById(id:ID):Option[ObjectType]"></a>
       <a id="findOneById(ID):Option[ObjectType]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -307,12 +350,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">findOneById</span><span class="params">(<span name="id">id: ID</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[ObjectType]</span>
+        <span class="name">findOneById</span><span class="params">(<span name="id">id: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>identifier</p></dd><dt>returns</dt><dd class="cmt"><p>(Option[ObjectType]) Some() of the object found, or <code>None</code> if no such object exists
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#fromJSON" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#fromJSON" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromJSON(s:String):ObjectType"></a>
       <a id="fromJSON(String):ObjectType"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -320,12 +364,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromJSON</span><span class="params">(<span name="s">s: String</span>)</span><span class="result">: ObjectType</span>
+        <span class="name">fromJSON</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">s</dt><dd class="cmt"><p>string representing a valid JSON object</p></dd><dt>returns</dt><dd class="cmt"><p>JSON deserialized to a model object
 </p></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#fromJSON" data-isabs="false">
+    </li><li name="com.novus.salat.dao.ModelCompanion#fromJSON" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromJSON(j:org.json4s.JsonAST.JObject):ObjectType"></a>
       <a id="fromJSON(JObject):ObjectType"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -333,12 +378,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromJSON</span><span class="params">(<span name="j">j: <span name="net.liftweb.json.JsonAST.JObject" class="extype">JObject</span></span>)</span><span class="result">: ObjectType</span>
+        <span class="name">fromJSON</span><span class="params">(<span name="j">j: <span class="extype" name="org.json4s.JsonAST.JObject">JObject</span></span>)</span><span class="result">: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">j</dt><dd class="cmt"><p><code>JObject</code> to be deserialized</p></dd><dt>returns</dt><dd class="cmt"><p><code>JObject</code> deserialized to a model object
 </p></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#fromJSONArray" data-isabs="false">
+    </li><li name="com.novus.salat.dao.ModelCompanion#fromJSONArray" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromJSONArray(s:String):List[ObjectType]"></a>
       <a id="fromJSONArray(String):List[ObjectType]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -346,12 +392,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromJSONArray</span><span class="params">(<span name="s">s: String</span>)</span><span class="result">: List[ObjectType]</span>
+        <span class="name">fromJSONArray</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">s</dt><dd class="cmt"><p>string representing a JSON array of valid <code>JObject</code>s</p></dd><dt>returns</dt><dd class="cmt"><p>deserialized list of model objects
 </p></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#fromJSONArray" data-isabs="false">
+    </li><li name="com.novus.salat.dao.ModelCompanion#fromJSONArray" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromJSONArray(j:org.json4s.JsonAST.JArray):List[ObjectType]"></a>
       <a id="fromJSONArray(JArray):List[ObjectType]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -359,37 +406,40 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromJSONArray</span><span class="params">(<span name="j">j: JArray</span>)</span><span class="result">: List[ObjectType]</span>
+        <span class="name">fromJSONArray</span><span class="params">(<span name="j">j: <span class="extype" name="org.json4s.JsonAST.JArray">JArray</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">j</dt><dd class="cmt"><p>JSON array of valid <code>JObject</code>s</p></dd><dt>returns</dt><dd class="cmt"><p>deserialized list of model objects
 </p></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#fromMap" data-isabs="false">
-      <a id="fromMap(Map[String, Any]):ObjectType"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion#fromMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fromMap(m:Map[String,Any]):ObjectType"></a>
+      <a id="fromMap(Map[String,Any]):ObjectType"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromMap</span><span class="params">(<span name="m">m: Map[String, <span name="scala.Any" class="extype">Any</span>]</span>)</span><span class="result">: ObjectType</span>
+        <span class="name">fromMap</span><span class="params">(<span name="m">m: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">m</dt><dd class="cmt"><p>a map populated with the field names and values of the model object</p></dd><dt>returns</dt><dd class="cmt"><p>model object instance
 </p></dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
-      <a id="getClass():java.lang.Class[_]"></a>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getClass</span><span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -397,51 +447,55 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#ids" data-isabs="false">
-      <a id="ids[A](A)((A) ⇒ DBObject):List[ID]"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion#ids" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ids[A](query:A)(implicitevidence$4:A=&gt;com.mongodb.casbah.Imports.DBObject):List[ID]"></a>
+      <a id="ids[A](A)((A)⇒mongodb.casbah.Imports.DBObject):List[ID]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ids</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="query">query: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (A) ⇒ DBObject</span>)</span><span class="result">: List[ID]</span>
+        <span class="name">ids</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="query">query: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ids.A">A</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="com.novus.salat.dao.ModelCompanion.ids.A">A</span>) ⇒ <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>type view bound to DBObject</p></dd><dt class="param">query</dt><dd class="cmt"><p>query</p></dd><dt>returns</dt><dd class="cmt"><p>list of IDs
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#insert" data-isabs="false">
-      <a id="insert(ObjectType,WriteConcern):Option[ID]"></a>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#insert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="insert(t:ObjectType,wc:com.mongodb.casbah.Imports.WriteConcern):Option[ID]"></a>
+      <a id="insert(ObjectType,mongodb.casbah.Imports.WriteConcern):Option[ID]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">insert</span><span class="params">(<span name="t">t: ObjectType</span>, <span name="wc">wc: WriteConcern</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[ID]</span>
+        <span class="name">insert</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteConcern">mongodb.casbah.Imports.WriteConcern</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>instance of ObjectType</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern</p></dd><dt>returns</dt><dd class="cmt"><p>if insert succeeds, ID of inserted object
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#insert" data-isabs="false">
-      <a id="insert(Traversable[ObjectType],WriteConcern):List[Option[ID]]"></a>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#insert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="insert(docs:Traversable[ObjectType],wc:com.mongodb.casbah.Imports.WriteConcern):List[Option[ID]]"></a>
+      <a id="insert(Traversable[ObjectType],mongodb.casbah.Imports.WriteConcern):List[Option[ID]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">insert</span><span class="params">(<span name="docs">docs: Traversable[ObjectType]</span>, <span name="wc">wc: WriteConcern</span>)</span><span class="result">: List[<span name="scala.Option" class="extype">Option</span>[ID]]</span>
+        <span class="name">insert</span><span class="params">(<span name="docs">docs: <span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>, <span name="wc">wc: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteConcern">mongodb.casbah.Imports.WriteConcern</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">docs</dt><dd class="cmt"><p>collection of <code>ObjectType</code> instances to insert</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern</p></dd><dt>returns</dt><dd class="cmt"><p>list of object ids
         TODO: flatten list of IDs - why on earth didn't I do that in the first place?
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.BaseDAOMethods#insert" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.BaseDAOMethods#insert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="insert(docs:ObjectType*)(implicitwc:com.mongodb.WriteConcern):List[Option[ID]]"></a>
       <a id="insert(ObjectType*)(WriteConcern):List[Option[ID]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -449,15 +503,16 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">insert</span><span class="params">(<span name="docs">docs: ObjectType*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="wc">wc: <span name="com.mongodb.WriteConcern" class="extype">WriteConcern</span></span>)</span><span class="result">: List[<span name="scala.Option" class="extype">Option</span>[ID]]</span>
+        <span class="name">insert</span><span class="params">(<span name="docs">docs: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="wc">wc: <span class="extype" name="com.mongodb.WriteConcern">WriteConcern</span></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Inserts a group of documents into the database.</p><div class="fullcomment"><div class="comment cmt"><p>Inserts a group of documents into the database.</p></div><dl class="paramcmts block"><dt class="param">docs</dt><dd class="cmt"><p>variable length argument of ObjectType instances</p></dd><dt>returns</dt><dd class="cmt"><p>if write concern succeeds, a list of object IDs
  TODO: this implicit: dumbest design decision on the face of the planet?
  TODO: replace vararg with traversable
  TODO: flatten list of IDs - why on earth didn't I do that in the first place?
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.BaseDAOMethods#insert" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.BaseDAOMethods#insert" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="insert(t:ObjectType):Option[ID]"></a>
       <a id="insert(ObjectType):Option[ID]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -465,12 +520,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">insert</span><span class="params">(<span name="t">t: ObjectType</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[ID]</span>
+        <span class="name">insert</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Inserts a document into the database.</p><div class="fullcomment"><div class="comment cmt"><p>Inserts a document into the database.</p></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>instance of ObjectType</p></dd><dt>returns</dt><dd class="cmt"><p>if insert succeeds, ID of inserted object
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -478,11 +534,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="prt" name="com.novus.salat.util.Logging#log" data-isabs="false">
+    </li><li name="com.novus.salat.util.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="log:com.novus.salat.util.Logger"></a>
       <a id="log:Logger"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -490,11 +547,12 @@
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">log</span><span class="result">: <span name="com.novus.salat.util.Logger" class="extype">Logger</span></span>
+        <span class="name">log</span><span class="result">: <span class="extype" name="com.novus.salat.util.Logger">Logger</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -502,11 +560,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -514,11 +573,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
       <a id="notifyAll():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -526,179 +586,193 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#primitiveProjection" data-isabs="false">
-      <a id="primitiveProjection[P](DBObject,String)(Manifest[P],Context):Option[P]"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion#primitiveProjection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="primitiveProjection[P](query:com.mongodb.casbah.Imports.DBObject,field:String)(implicitm:Manifest[P],implicitctx:com.novus.salat.Context):Option[P]"></a>
+      <a id="primitiveProjection[P](mongodb.casbah.Imports.DBObject,String)(Manifest[P],Context):Option[P]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">primitiveProjection</span><span class="tparams">[<span name="P">P</span>]</span><span class="params">(<span name="query">query: DBObject</span>, <span name="field">field: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: Manifest[P]</span>, <span name="ctx">ctx: <a name="com.novus.salat.Context" class="extype" href="../Context.html">Context</a></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[P]</span>
+        <span class="name">primitiveProjection</span><span class="tparams">[<span name="P">P</span>]</span><span class="params">(<span name="query">query: <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>, <span name="field">field: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.primitiveProjection.P">P</span>]</span>, <span name="ctx">ctx: <a href="../Context.html" class="extype" name="com.novus.salat.Context">Context</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.primitiveProjection.P">P</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>type of projected field</p></dd><dt class="param">query</dt><dd class="cmt"><p>object for which to search</p></dd><dt class="param">field</dt><dd class="cmt"><p>field to project on</p></dd><dt class="param">m</dt><dd class="cmt"><p>implicit manifest typed to <code>P</code></p></dd><dt class="param">ctx</dt><dd class="cmt"><p>implicit <a name="com.novus.salat.Context" class="extype" href="../Context.html">Context</a></p></dd><dt>returns</dt><dd class="cmt"><p>(Option[P]) Some() of the object found, or <code>None</code> if no such object exists
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#primitiveProjections" data-isabs="false">
-      <a id="primitiveProjections[P](DBObject,String)(Manifest[P],Context):List[P]"></a>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>type of projected field</p></dd><dt class="param">query</dt><dd class="cmt"><p>object for which to search</p></dd><dt class="param">field</dt><dd class="cmt"><p>field to project on</p></dd><dt class="param">m</dt><dd class="cmt"><p>implicit manifest typed to <code>P</code></p></dd><dt class="param">ctx</dt><dd class="cmt"><p>implicit <a href="../Context.html" class="extype" name="com.novus.salat.Context">com.novus.salat.Context</a></p></dd><dt>returns</dt><dd class="cmt"><p>(Option[P]) Some() of the object found, or <code>None</code> if no such object exists
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#primitiveProjections" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="primitiveProjections[P](query:com.mongodb.casbah.Imports.DBObject,field:String)(implicitm:Manifest[P],implicitctx:com.novus.salat.Context):List[P]"></a>
+      <a id="primitiveProjections[P](mongodb.casbah.Imports.DBObject,String)(Manifest[P],Context):List[P]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">primitiveProjections</span><span class="tparams">[<span name="P">P</span>]</span><span class="params">(<span name="query">query: DBObject</span>, <span name="field">field: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: Manifest[P]</span>, <span name="ctx">ctx: <a name="com.novus.salat.Context" class="extype" href="../Context.html">Context</a></span>)</span><span class="result">: List[P]</span>
+        <span class="name">primitiveProjections</span><span class="tparams">[<span name="P">P</span>]</span><span class="params">(<span name="query">query: <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>, <span name="field">field: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.primitiveProjections.P">P</span>]</span>, <span name="ctx">ctx: <a href="../Context.html" class="extype" name="com.novus.salat.Context">Context</a></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.primitiveProjections.P">P</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>type of projected field</p></dd><dt class="param">query</dt><dd class="cmt"><p>object for which to search</p></dd><dt class="param">field</dt><dd class="cmt"><p>field to project on</p></dd><dt class="param">m</dt><dd class="cmt"><p>implicit manifest typed to <code>P</code></p></dd><dt class="param">ctx</dt><dd class="cmt"><p>implicit <a name="com.novus.salat.Context" class="extype" href="../Context.html">Context</a></p></dd><dt>returns</dt><dd class="cmt"><p>(List[P]) of the objects found
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#projection" data-isabs="false">
-      <a id="projection[P&lt;:CaseClass](DBObject,String)(Manifest[P],Context):Option[P]"></a>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>type of projected field</p></dd><dt class="param">query</dt><dd class="cmt"><p>object for which to search</p></dd><dt class="param">field</dt><dd class="cmt"><p>field to project on</p></dd><dt class="param">m</dt><dd class="cmt"><p>implicit manifest typed to <code>P</code></p></dd><dt class="param">ctx</dt><dd class="cmt"><p>implicit <a href="../Context.html" class="extype" name="com.novus.salat.Context">com.novus.salat.Context</a></p></dd><dt>returns</dt><dd class="cmt"><p>(List[P]) of the objects found
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#projection" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="projection[P&lt;:com.novus.salat.CaseClass](query:com.mongodb.casbah.Imports.DBObject,field:String)(implicitm:Manifest[P],implicitctx:com.novus.salat.Context):Option[P]"></a>
+      <a id="projection[P&lt;:CaseClass](mongodb.casbah.Imports.DBObject,String)(Manifest[P],Context):Option[P]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">projection</span><span class="tparams">[<span name="P">P &lt;: CaseClass</span>]</span><span class="params">(<span name="query">query: DBObject</span>, <span name="field">field: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: Manifest[P]</span>, <span name="ctx">ctx: <a name="com.novus.salat.Context" class="extype" href="../Context.html">Context</a></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[P]</span>
+        <span class="name">projection</span><span class="tparams">[<span name="P">P &lt;: <a href="../package.html#CaseClass=Product" class="extmbr" name="com.novus.salat.CaseClass">CaseClass</a></span>]</span><span class="params">(<span name="query">query: <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>, <span name="field">field: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.projection.P">P</span>]</span>, <span name="ctx">ctx: <a href="../Context.html" class="extype" name="com.novus.salat.Context">Context</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.projection.P">P</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>type of projected field</p></dd><dt class="param">query</dt><dd class="cmt"><p>object for which to search</p></dd><dt class="param">field</dt><dd class="cmt"><p>field to project on</p></dd><dt class="param">m</dt><dd class="cmt"><p>implicit manifest typed to <code>P</code></p></dd><dt class="param">ctx</dt><dd class="cmt"><p>implicit <a name="com.novus.salat.Context" class="extype" href="../Context.html">Context</a></p></dd><dt>returns</dt><dd class="cmt"><p>(Option[P]) Some() of the object found, or <code>None</code> if no such object exists
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#projections" data-isabs="false">
-      <a id="projections[P&lt;:CaseClass](DBObject,String)(Manifest[P],Context):List[P]"></a>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>type of projected field</p></dd><dt class="param">query</dt><dd class="cmt"><p>object for which to search</p></dd><dt class="param">field</dt><dd class="cmt"><p>field to project on</p></dd><dt class="param">m</dt><dd class="cmt"><p>implicit manifest typed to <code>P</code></p></dd><dt class="param">ctx</dt><dd class="cmt"><p>implicit <a href="../Context.html" class="extype" name="com.novus.salat.Context">com.novus.salat.Context</a></p></dd><dt>returns</dt><dd class="cmt"><p>(Option[P]) Some() of the object found, or <code>None</code> if no such object exists
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#projections" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="projections[P&lt;:com.novus.salat.CaseClass](query:com.mongodb.casbah.Imports.DBObject,field:String)(implicitm:Manifest[P],implicitctx:com.novus.salat.Context):List[P]"></a>
+      <a id="projections[P&lt;:CaseClass](mongodb.casbah.Imports.DBObject,String)(Manifest[P],Context):List[P]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">projections</span><span class="tparams">[<span name="P">P &lt;: CaseClass</span>]</span><span class="params">(<span name="query">query: DBObject</span>, <span name="field">field: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: Manifest[P]</span>, <span name="ctx">ctx: <a name="com.novus.salat.Context" class="extype" href="../Context.html">Context</a></span>)</span><span class="result">: List[P]</span>
+        <span class="name">projections</span><span class="tparams">[<span name="P">P &lt;: <a href="../package.html#CaseClass=Product" class="extmbr" name="com.novus.salat.CaseClass">CaseClass</a></span>]</span><span class="params">(<span name="query">query: <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>, <span name="field">field: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="m">m: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.projections.P">P</span>]</span>, <span name="ctx">ctx: <a href="../Context.html" class="extype" name="com.novus.salat.Context">Context</a></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.projections.P">P</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>type of projected field</p></dd><dt class="param">query</dt><dd class="cmt"><p>object for which to search</p></dd><dt class="param">field</dt><dd class="cmt"><p>field to project on</p></dd><dt class="param">m</dt><dd class="cmt"><p>implicit manifest typed to <code>P</code></p></dd><dt class="param">ctx</dt><dd class="cmt"><p>implicit <a name="com.novus.salat.Context" class="extype" href="../Context.html">Context</a></p></dd><dt>returns</dt><dd class="cmt"><p>(List[P]) of the objects found
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#remove" data-isabs="false">
-      <a id="remove[A](A,WriteConcern)((A) ⇒ DBObject):Unit"></a>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">P</dt><dd class="cmt"><p>type of projected field</p></dd><dt class="param">query</dt><dd class="cmt"><p>object for which to search</p></dd><dt class="param">field</dt><dd class="cmt"><p>field to project on</p></dd><dt class="param">m</dt><dd class="cmt"><p>implicit manifest typed to <code>P</code></p></dd><dt class="param">ctx</dt><dd class="cmt"><p>implicit <a href="../Context.html" class="extype" name="com.novus.salat.Context">com.novus.salat.Context</a></p></dd><dt>returns</dt><dd class="cmt"><p>(List[P]) of the objects found
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#remove" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="remove[A](q:A,wc:com.mongodb.casbah.Imports.WriteConcern)(implicitevidence$5:A=&gt;com.mongodb.casbah.Imports.DBObject):com.mongodb.casbah.Imports.WriteResult"></a>
+      <a id="remove[A](A,mongodb.casbah.Imports.WriteConcern)((A)⇒mongodb.casbah.Imports.DBObject):mongodb.casbah.Imports.WriteResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">remove</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="q">q: A</span>, <span name="wc">wc: WriteConcern</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (A) ⇒ DBObject</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">remove</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="q">q: <span class="extype" name="com.novus.salat.dao.ModelCompanion.remove.A">A</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteConcern">mongodb.casbah.Imports.WriteConcern</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="com.novus.salat.dao.ModelCompanion.remove.A">A</span>) ⇒ <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.Imports.WriteResult</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>
-</p></dd><dt class="param">q</dt><dd class="cmt"><p>the object that documents to be removed must match</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#remove" data-isabs="false">
-      <a id="remove(ObjectType,WriteConcern):Unit"></a>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"></dd><dt class="param">q</dt><dd class="cmt"><p>the object that documents to be removed must match</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern</p></dd><dt>returns</dt><dd class="cmt"><p>(WriteResult) result of write operation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#remove" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="remove(t:ObjectType,wc:com.mongodb.casbah.Imports.WriteConcern):com.mongodb.casbah.Imports.WriteResult"></a>
+      <a id="remove(ObjectType,mongodb.casbah.Imports.WriteConcern):mongodb.casbah.Imports.WriteResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">remove</span><span class="params">(<span name="t">t: ObjectType</span>, <span name="wc">wc: WriteConcern = <span class="symbol"><span class="name"><a href="#defaultWriteConcern:WriteConcern">defaultWriteConcern</a></span></span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">remove</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteConcern">mongodb.casbah.Imports.WriteConcern</span> = <span class="symbol"><span class="name"><a href="#defaultWriteConcern:com.mongodb.WriteConcern">defaultWriteConcern</a></span></span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.Imports.WriteResult</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to remove from the collection</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.BaseDAOMethods#remove" data-isabs="false">
-      <a id="remove[A](A)((A) ⇒ DBObject):Unit"></a>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to remove from the collection</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern</p></dd><dt>returns</dt><dd class="cmt"><p>(WriteResult) result of write operation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.BaseDAOMethods#remove" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="remove[A](q:A)(implicitevidence$6:A=&gt;com.mongodb.DBObject):com.mongodb.casbah.Imports.WriteResult"></a>
+      <a id="remove[A](A)((A)⇒DBObject):mongodb.casbah.Imports.WriteResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">remove</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="q">q: A</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (A) ⇒ <span name="com.mongodb.DBObject" class="extype">DBObject</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">remove</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="q">q: <span class="extype" name="com.novus.salat.dao.BaseDAOMethods.remove.A">A</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: (<span class="extype" name="com.novus.salat.dao.BaseDAOMethods.remove.A">A</span>) ⇒ <span class="extype" name="com.mongodb.DBObject">DBObject</span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.Imports.WriteResult</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Removes objects from the database collection.</p><div class="fullcomment"><div class="comment cmt"><p>Removes objects from the database collection.</p></div><dl class="paramcmts block"><dt class="param">q</dt><dd class="cmt"><p>the object that documents to be removed must match
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.BaseDAOMethods#remove" data-isabs="false">
-      <a id="remove(ObjectType):Unit"></a>
+      <p class="shortcomment cmt">Removes objects from the database collection.</p><div class="fullcomment"><div class="comment cmt"><p>Removes objects from the database collection.</p></div><dl class="paramcmts block"><dt class="param">q</dt><dd class="cmt"><p>the object that documents to be removed must match</p></dd><dt>returns</dt><dd class="cmt"><p>(WriteResult) result of write operation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.BaseDAOMethods#remove" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="remove(t:ObjectType):com.mongodb.casbah.Imports.WriteResult"></a>
+      <a id="remove(ObjectType):mongodb.casbah.Imports.WriteResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">remove</span><span class="params">(<span name="t">t: ObjectType</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">remove</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.Imports.WriteResult</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Remove a matching object from the collection</p><div class="fullcomment"><div class="comment cmt"><p>Remove a matching object from the collection</p></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to remove from the collection
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#removeById" data-isabs="false">
-      <a id="removeById(ID,WriteConcern):Unit"></a>
+      <p class="shortcomment cmt">Remove a matching object from the collection</p><div class="fullcomment"><div class="comment cmt"><p>Remove a matching object from the collection</p></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to remove from the collection</p></dd><dt>returns</dt><dd class="cmt"><p>(WriteResult) result of write operation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#removeById" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeById(id:ID,wc:com.mongodb.casbah.Imports.WriteConcern):com.mongodb.casbah.Imports.WriteResult"></a>
+      <a id="removeById(ID,mongodb.casbah.Imports.WriteConcern):mongodb.casbah.Imports.WriteResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">removeById</span><span class="params">(<span name="id">id: ID</span>, <span name="wc">wc: WriteConcern = <span class="symbol"><span class="name"><a href="#defaultWriteConcern:WriteConcern">defaultWriteConcern</a></span></span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">removeById</span><span class="params">(<span name="id">id: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteConcern">mongodb.casbah.Imports.WriteConcern</span> = <span class="symbol"><span class="name"><a href="#defaultWriteConcern:com.mongodb.WriteConcern">defaultWriteConcern</a></span></span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.Imports.WriteResult</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>the ID of the document to be removed</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#removeByIds" data-isabs="false">
-      <a id="removeByIds(List[ID],WriteConcern):Unit"></a>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>the ID of the document to be removed</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern</p></dd><dt>returns</dt><dd class="cmt"><p>(WriteResult) result of write operation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#removeByIds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeByIds(ids:List[ID],wc:com.mongodb.casbah.Imports.WriteConcern):com.mongodb.casbah.Imports.WriteResult"></a>
+      <a id="removeByIds(List[ID],mongodb.casbah.Imports.WriteConcern):mongodb.casbah.Imports.WriteResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">removeByIds</span><span class="params">(<span name="ids">ids: List[ID]</span>, <span name="wc">wc: WriteConcern = <span class="symbol"><span class="name"><a href="#defaultWriteConcern:WriteConcern">defaultWriteConcern</a></span></span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">removeByIds</span><span class="params">(<span name="ids">ids: <span class="extype" name="scala.List">List</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>]</span>, <span name="wc">wc: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteConcern">mongodb.casbah.Imports.WriteConcern</span> = <span class="symbol"><span class="name"><a href="#defaultWriteConcern:com.mongodb.WriteConcern">defaultWriteConcern</a></span></span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.Imports.WriteResult</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">ids</dt><dd class="cmt"><p>the list of IDs identifying the list of documents to be removed</p></dd><dt class="param">wc</dt><dd class="cmt"><p>wrote concern
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#save" data-isabs="false">
-      <a id="save(ObjectType,WriteConcern):Unit"></a>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">ids</dt><dd class="cmt"><p>the list of IDs identifying the list of documents to be removed</p></dd><dt class="param">wc</dt><dd class="cmt"><p>wrote concern</p></dd><dt>returns</dt><dd class="cmt"><p>(WriteResult) result of write operation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#save" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="save(t:ObjectType,wc:com.mongodb.casbah.Imports.WriteConcern):com.mongodb.casbah.Imports.WriteResult"></a>
+      <a id="save(ObjectType,mongodb.casbah.Imports.WriteConcern):mongodb.casbah.Imports.WriteResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">save</span><span class="params">(<span name="t">t: ObjectType</span>, <span name="wc">wc: WriteConcern = <span class="symbol"><span class="name"><a href="#defaultWriteConcern:WriteConcern">defaultWriteConcern</a></span></span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">save</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteConcern">mongodb.casbah.Imports.WriteConcern</span> = <span class="symbol"><span class="name"><a href="#defaultWriteConcern:com.mongodb.WriteConcern">defaultWriteConcern</a></span></span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.Imports.WriteResult</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to save</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.BaseDAOMethods#save" data-isabs="false">
-      <a id="save(ObjectType):Unit"></a>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to save</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern</p></dd><dt>returns</dt><dd class="cmt"><p>(WriteResult) result of write operation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.BaseDAOMethods#save" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="save(t:ObjectType):com.mongodb.casbah.Imports.WriteResult"></a>
+      <a id="save(ObjectType):mongodb.casbah.Imports.WriteResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">save</span><span class="params">(<span name="t">t: ObjectType</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">save</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.Imports.WriteResult</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Saves an object to this collection.</p><div class="fullcomment"><div class="comment cmt"><p>Saves an object to this collection.</p></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to save
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
-      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <p class="shortcomment cmt">Saves an object to this collection.</p><div class="fullcomment"><div class="comment cmt"><p>Saves an object to this collection.</p></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to save</p></dd><dt>returns</dt><dd class="cmt"><p>(WriteResult) result of write operation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#toCompactJSONArray" data-isabs="false">
+    </li><li name="com.novus.salat.dao.ModelCompanion#toCompactJSONArray" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toCompactJSONArray(t:Traversable[ObjectType]):String"></a>
       <a id="toCompactJSONArray(Traversable[ObjectType]):String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -706,12 +780,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toCompactJSONArray</span><span class="params">(<span name="t">t: Traversable[ObjectType]</span>)</span><span class="result">: String</span>
+        <span class="name">toCompactJSONArray</span><span class="params">(<span name="t">t: <span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>collection to be serialized</p></dd><dt>returns</dt><dd class="cmt"><p>collection of model objects serialized to a JSON array and rendered as compact JSON
 </p></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#toCompactJson" data-isabs="false">
+    </li><li name="com.novus.salat.dao.ModelCompanion#toCompactJson" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toCompactJson(t:ObjectType):String"></a>
       <a id="toCompactJson(ObjectType):String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -719,25 +794,27 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toCompactJson</span><span class="params">(<span name="t">t: ObjectType</span>)</span><span class="result">: String</span>
+        <span class="name">toCompactJson</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to be serialized</p></dd><dt>returns</dt><dd class="cmt"><p>object serialized as pretty JSON to a String</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>http://www.assembla.com/spaces/liftweb/wiki/JSON_Support
 </p></span></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#toDBObject" data-isabs="false">
-      <a id="toDBObject(ObjectType):DBObject"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion#toDBObject" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toDBObject(t:ObjectType):com.mongodb.casbah.Imports.DBObject"></a>
+      <a id="toDBObject(ObjectType):mongodb.casbah.Imports.DBObject"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toDBObject</span><span class="params">(<span name="t">t: ObjectType</span>)</span><span class="result">: DBObject</span>
+        <span class="name">toDBObject</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to be serialized</p></dd><dt>returns</dt><dd class="cmt"><p>object serialized as <code>DBObject</code>
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#toJSONArray" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.ModelCompanion#toJSONArray" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toJSONArray(t:Traversable[ObjectType]):org.json4s.JArray"></a>
       <a id="toJSONArray(Traversable[ObjectType]):JArray"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -745,12 +822,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toJSONArray</span><span class="params">(<span name="t">t: Traversable[ObjectType]</span>)</span><span class="result">: JArray</span>
+        <span class="name">toJSONArray</span><span class="params">(<span name="t">t: <span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>)</span><span class="result">: <span class="extype" name="org.json4s.JArray">JArray</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>collection to be serialized</p></dd><dt>returns</dt><dd class="cmt"><p>collection of model objects serialized as a JSON array of <code>JObject</code>
 </p></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#toJson" data-isabs="false">
+    </li><li name="com.novus.salat.dao.ModelCompanion#toJson" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toJson(t:ObjectType):org.json4s.JsonAST.JObject"></a>
       <a id="toJson(ObjectType):JObject"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -758,39 +836,42 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toJson</span><span class="params">(<span name="t">t: ObjectType</span>)</span><span class="result">: <span name="net.liftweb.json.JsonAST.JObject" class="extype">JObject</span></span>
+        <span class="name">toJson</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>)</span><span class="result">: <span class="extype" name="org.json4s.JsonAST.JObject">JObject</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to be serialized</p></dd><dt>returns</dt><dd class="cmt"><p>object serialized to <code>JObject</code></p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>http://www.assembla.com/spaces/liftweb/wiki/JSON_Support
 </p></span></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#toMap" data-isabs="false">
-      <a id="toMap(ObjectType):Map[String, Any]"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion#toMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toMap(t:ObjectType):Map[String,Any]"></a>
+      <a id="toMap(ObjectType):Map[String,Any]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toMap</span><span class="params">(<span name="t">t: ObjectType</span>)</span><span class="result">: Map[String, <span name="scala.Any" class="extype">Any</span>]</span>
+        <span class="name">toMap</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Any">Any</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>model object instance</p></dd><dt>returns</dt><dd class="cmt"><p>a map populated with the field names and values of the model object
 </p></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#toObject" data-isabs="false">
-      <a id="toObject(DBObject):ObjectType"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion#toObject" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toObject(dbo:com.mongodb.casbah.Imports.DBObject):ObjectType"></a>
+      <a id="toObject(mongodb.casbah.Imports.DBObject):ObjectType"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toObject</span><span class="params">(<span name="dbo">dbo: DBObject</span>)</span><span class="result">: ObjectType</span>
+        <span class="name">toObject</span><span class="params">(<span name="dbo">dbo: <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>)</span><span class="result">: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">dbo</dt><dd class="cmt"><p><code>DBObject</code> to be deserialized</p></dd><dt>returns</dt><dd class="cmt"><p><code>DBObject</code> deserialized to object
  TODO - bring back view bound...  assuming it could possibly be worth the bother.
 </p></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#toPrettyJSONArray" data-isabs="false">
+    </li><li name="com.novus.salat.dao.ModelCompanion#toPrettyJSONArray" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toPrettyJSONArray(t:Traversable[ObjectType]):String"></a>
       <a id="toPrettyJSONArray(Traversable[ObjectType]):String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -798,12 +879,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toPrettyJSONArray</span><span class="params">(<span name="t">t: Traversable[ObjectType]</span>)</span><span class="result">: String</span>
+        <span class="name">toPrettyJSONArray</span><span class="params">(<span name="t">t: <span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>collection to be serialized</p></dd><dt>returns</dt><dd class="cmt"><p>collection of model objects serialized to a JSON array and rendered as pretty JSON
 </p></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#toPrettyJson" data-isabs="false">
+    </li><li name="com.novus.salat.dao.ModelCompanion#toPrettyJson" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toPrettyJson(t:ObjectType):String"></a>
       <a id="toPrettyJson(ObjectType):String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -811,12 +893,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toPrettyJson</span><span class="params">(<span name="t">t: ObjectType</span>)</span><span class="result">: String</span>
+        <span class="name">toPrettyJson</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">t</dt><dd class="cmt"><p>object to be serialized</p></dd><dt>returns</dt><dd class="cmt"><p>object serialized as pretty JSON to a String</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p>http://www.assembla.com/spaces/liftweb/wiki/JSON_Support
 </p></span></dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -824,37 +907,40 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion#update" data-isabs="false">
-      <a id="update(DBObject,DBObject,Boolean,Boolean,WriteConcern):Unit"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion#update" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="update(q:com.mongodb.casbah.Imports.DBObject,o:com.mongodb.casbah.Imports.DBObject,upsert:Boolean,multi:Boolean,wc:com.mongodb.casbah.Imports.WriteConcern):com.mongodb.casbah.Imports.WriteResult"></a>
+      <a id="update(mongodb.casbah.Imports.DBObject,mongodb.casbah.Imports.DBObject,Boolean,Boolean,mongodb.casbah.Imports.WriteConcern):mongodb.casbah.Imports.WriteResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">update</span><span class="params">(<span name="q">q: DBObject</span>, <span name="o">o: DBObject</span>, <span name="upsert">upsert: <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="multi">multi: <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="wc">wc: WriteConcern = <span class="symbol"><span class="name"><a href="#defaultWriteConcern:WriteConcern">defaultWriteConcern</a></span></span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">update</span><span class="params">(<span name="q">q: <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>, <span name="o">o: <span class="extype" name="com.mongodb.casbah.commons.TypeImports.DBObject">mongodb.casbah.Imports.DBObject</span></span>, <span name="upsert">upsert: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="multi">multi: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteConcern">mongodb.casbah.Imports.WriteConcern</span> = <span class="symbol"><span class="name"><a href="#defaultWriteConcern:com.mongodb.WriteConcern">defaultWriteConcern</a></span></span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.Imports.WriteResult</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Performs an update operation.</p><div class="fullcomment"><div class="comment cmt"><p>Performs an update operation.</p></div><dl class="paramcmts block"><dt class="param">q</dt><dd class="cmt"><p>search query for old object to update</p></dd><dt class="param">o</dt><dd class="cmt"><p>object with which to update <tt>q</tt></p></dd><dt class="param">upsert</dt><dd class="cmt"><p>if the database should create the element if it does not exist</p></dd><dt class="param">multi</dt><dd class="cmt"><p>if the update should be applied to all objects matching</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.ModelCompanion" class="extype" href="">ModelCompanion</a> → <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.dao.BaseDAOMethods#update" data-isabs="false">
-      <a id="update(DBObject,ObjectType,Boolean,Boolean,WriteConcern):Unit"></a>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">q</dt><dd class="cmt"><p>search query for old object to update</p></dd><dt class="param">o</dt><dd class="cmt"><p>object with which to update <tt>q</tt></p></dd><dt class="param">upsert</dt><dd class="cmt"><p>if the database should create the element if it does not exist</p></dd><dt class="param">multi</dt><dd class="cmt"><p>if the update should be applied to all objects matching</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern</p></dd><dt>returns</dt><dd class="cmt"><p>(WriteResult) result of write operation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.novus.salat.dao.ModelCompanion">ModelCompanion</a> → <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="com.novus.salat.dao.BaseDAOMethods#update" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="update(q:com.mongodb.DBObject,t:ObjectType,upsert:Boolean,multi:Boolean,wc:com.mongodb.WriteConcern):com.mongodb.casbah.Imports.WriteResult"></a>
+      <a id="update(DBObject,ObjectType,Boolean,Boolean,WriteConcern):mongodb.casbah.Imports.WriteResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">update</span><span class="params">(<span name="q">q: <span name="com.mongodb.DBObject" class="extype">DBObject</span></span>, <span name="t">t: ObjectType</span>, <span name="upsert">upsert: <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="multi">multi: <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="wc">wc: <span name="com.mongodb.WriteConcern" class="extype">WriteConcern</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">update</span><span class="params">(<span name="q">q: <span class="extype" name="com.mongodb.DBObject">DBObject</span></span>, <span name="t">t: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span></span>, <span name="upsert">upsert: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="multi">multi: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.WriteConcern">WriteConcern</span></span>)</span><span class="result">: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.Imports.WriteResult</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Performs an update operation.</p><div class="fullcomment"><div class="comment cmt"><p>Performs an update operation.</p></div><dl class="paramcmts block"><dt class="param">q</dt><dd class="cmt"><p>search query for old object to update</p></dd><dt class="param">t</dt><dd class="cmt"><p>object with which to update <tt>q</tt></p></dd><dt class="param">upsert</dt><dd class="cmt"><p>if the database should create the element if it does not exist</p></dd><dt class="param">multi</dt><dd class="cmt"><p>if the update should be applied to all objects matching</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <p class="shortcomment cmt">Performs an update operation.</p><div class="fullcomment"><div class="comment cmt"><p>Performs an update operation.</p></div><dl class="paramcmts block"><dt class="param">q</dt><dd class="cmt"><p>search query for old object to update</p></dd><dt class="param">t</dt><dd class="cmt"><p>object with which to update <tt>q</tt></p></dd><dt class="param">upsert</dt><dd class="cmt"><p>if the database should create the element if it does not exist</p></dd><dt class="param">multi</dt><dd class="cmt"><p>if the update should be applied to all objects matching</p></dd><dt class="param">wc</dt><dd class="cmt"><p>write concern</p></dd><dt>returns</dt><dd class="cmt"><p>(WriteResult) result of write operation
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -862,14 +948,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
       <a id="wait(Long,Int):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -877,14 +964,15 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
       <a id="wait(Long):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -892,7 +980,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -902,9 +990,12 @@
     </li></ol>
             </div>
 
-        <div class="values members" id="values">
+        
+
+        <div id="values" class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li visbl="pub" name="com.novus.salat.dao.BaseDAOMethods#findOneByID" data-isabs="false">
+              <ol><li name="com.novus.salat.dao.BaseDAOMethods#findOneByID" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="findOneByID(id:ID):Option[ObjectType]"></a>
       <a id="findOneByID(ID):Option[ObjectType]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -912,11 +1003,11 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 0.0.8) Use findOneById instead">findOneByID</span><span class="params">(<span name="id">id: ID</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[ObjectType]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 0.0.8) Use findOneById instead">findOneByID</span><span class="params">(<span name="id">id: <span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Find an object by its ID.</p><div class="fullcomment"><div class="comment cmt"><p>Find an object by its ID.</p></div><dl class="paramcmts block"><dt class="param">id</dt><dd class="cmt"><p>identifier</p></dd><dt>returns</dt><dd class="cmt"><p>(Option[ObjectType]) Some() of the object found, or <code>None</code> if no such object exists
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a></dd><dt>Annotations</dt><dd>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a></dd><dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 0.0.8)</i> Use findOneById instead</p></dd></dl></div>
@@ -925,14 +1016,22 @@
         </div>
 
         <div id="inheritedMembers">
-        <div name="com.novus.salat.util.Logging" class="parent">
-              <h3>Inherited from <span name="com.novus.salat.util.Logging" class="extype">Logging</span></h3>
-            </div><div name="com.novus.salat.dao.BaseDAOMethods" class="parent">
-              <h3>Inherited from <a name="com.novus.salat.dao.BaseDAOMethods" class="extype" href="BaseDAOMethods.html">BaseDAOMethods</a>[ObjectType, ID]</h3>
-            </div><div name="scala.AnyRef" class="parent">
-              <h3>Inherited from AnyRef</h3>
-            </div><div name="scala.Any" class="parent">
-              <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
+        <div class="parent" name="com.novus.salat.util.Logging">
+              <h3>Inherited from <span class="extype" name="com.novus.salat.util.Logging">Logging</span></h3>
+            </div><div class="parent" name="com.novus.salat.dao.BaseDAOMethods">
+              <h3>Inherited from <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>, <span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>]</h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
             </div>
         </div>
 

@@ -2,24 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>com.novus.salat.transformers.out</title>
+          <title>out - com.novus.salat.transformers.out</title>
+          <meta name="description" content="out - com.novus.salat.transformers.out" />
+          <meta name="keywords" content="out com.novus.salat.transformers.out" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../../lib/jquery.js"></script>
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'com.novus.salat.transformers.out.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../../../lib/package_big.png" />
-        <p id="owner"><a name="com" class="extype" href="../../../../package.html">com</a>.<a name="com.novus" class="extype" href="../../../package.html">novus</a>.<a name="com.novus.salat" class="extype" href="../../package.html">salat</a>.<a name="com.novus.salat.transformers" class="extype" href="../package.html">transformers</a></p>
+        <p id="owner"><a href="../../../../package.html" class="extype" name="com">com</a>.<a href="../../../package.html" class="extype" name="com.novus">novus</a>.<a href="../../package.html" class="extype" name="com.novus.salat">salat</a>.<a href="../package.html" class="extype" name="com.novus.salat.transformers">transformers</a></p>
         <h1>out</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
@@ -29,13 +44,36 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
-    
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-        
-        
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="com.novus.salat.transformers.out"><span>out</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
             <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
@@ -46,9 +84,10 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="com.novus.salat.transformers.out.BigDecimalExtractor" data-isabs="true">
+              <ol><li name="com.novus.salat.transformers.out.BigDecimalExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BigDecimalExtractorextendsTransformer"></a>
       <a id="BigDecimalExtractor:BigDecimalExtractor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -56,11 +95,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="BigDecimalExtractor.html"><span class="name">BigDecimalExtractor</span></a><span class="result"> extends Transformer</span>
+        <a href="BigDecimalExtractor.html"><span class="name">BigDecimalExtractor</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.out.BigIntExtractor" data-isabs="true">
+    </li><li name="com.novus.salat.transformers.out.BigIntExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BigIntExtractorextendsTransformer"></a>
       <a id="BigIntExtractor:BigIntExtractor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -68,11 +108,25 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="BigIntExtractor.html"><span class="name">BigIntExtractor</span></a><span class="result"> extends Transformer</span>
+        <a href="BigIntExtractor.html"><span class="name">BigIntExtractor</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.out.CaseObjectExtractor" data-isabs="true">
+    </li><li name="com.novus.salat.transformers.out.BitSetExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BitSetExtractorextendsTransformerwithLogging"></a>
+      <a id="BitSetExtractor:BitSetExtractor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="BitSetExtractor.html"><span class="name">BitSetExtractor</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a> with <span class="extype" name="com.novus.salat.util.Logging">Logging</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.novus.salat.transformers.out.CaseObjectExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CaseObjectExtractorextendsTransformerwithLogging"></a>
       <a id="CaseObjectExtractor:CaseObjectExtractor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -80,11 +134,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="CaseObjectExtractor.html"><span class="name">CaseObjectExtractor</span></a><span class="result"> extends Transformer with Logging</span>
+        <a href="CaseObjectExtractor.html"><span class="name">CaseObjectExtractor</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a> with <span class="extype" name="com.novus.salat.util.Logging">Logging</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.out.CharToString" data-isabs="true">
+    </li><li name="com.novus.salat.transformers.out.CharToString" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CharToStringextendsTransformer"></a>
       <a id="CharToString:CharToString"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -92,11 +147,25 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="CharToString.html"><span class="name">CharToString</span></a><span class="result"> extends Transformer</span>
+        <a href="CharToString.html"><span class="name">CharToString</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.out.EnumStringifier" data-isabs="true">
+    </li><li name="com.novus.salat.transformers.out.DateTimeZoneExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DateTimeZoneExtractorextendsTransformer"></a>
+      <a id="DateTimeZoneExtractor:DateTimeZoneExtractor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DateTimeZoneExtractor.html"><span class="name">DateTimeZoneExtractor</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.novus.salat.transformers.out.EnumStringifier" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EnumStringifierextendsTransformer"></a>
       <a id="EnumStringifier:EnumStringifier"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -104,11 +173,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="EnumStringifier.html"><span class="name">EnumStringifier</span></a><span class="result"> extends Transformer</span>
+        <a href="EnumStringifier.html"><span class="name">EnumStringifier</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.out.FloatToDouble" data-isabs="true">
+    </li><li name="com.novus.salat.transformers.out.FloatToDouble" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FloatToDoubleextendsTransformer"></a>
       <a id="FloatToDouble:FloatToDouble"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -116,11 +186,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="FloatToDouble.html"><span class="name">FloatToDouble</span></a><span class="result"> extends Transformer</span>
+        <a href="FloatToDouble.html"><span class="name">FloatToDouble</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.out.InContextToDBObject" data-isabs="true">
+    </li><li name="com.novus.salat.transformers.out.InContextToDBObject" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="InContextToDBObjectextendsTransformerwithInContextTransformer"></a>
       <a id="InContextToDBObject:InContextToDBObject"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -128,11 +199,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="InContextToDBObject.html"><span class="name">InContextToDBObject</span></a><span class="result"> extends Transformer with InContextTransformer</span>
+        <a href="InContextToDBObject.html"><span class="name">InContextToDBObject</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a> with <a href="../InContextTransformer.html" class="extype" name="com.novus.salat.transformers.InContextTransformer">InContextTransformer</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.out.MapExtractor" data-isabs="true">
+    </li><li name="com.novus.salat.transformers.out.MapExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MapExtractorextendsTransformer"></a>
       <a id="MapExtractor:MapExtractor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -140,11 +212,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="MapExtractor.html"><span class="name">MapExtractor</span></a><span class="result"> extends Transformer</span>
+        <a href="MapExtractor.html"><span class="name">MapExtractor</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.out.OptionExtractor" data-isabs="true">
+    </li><li name="com.novus.salat.transformers.out.OptionExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="OptionExtractorextendsTransformer"></a>
       <a id="OptionExtractor:OptionExtractor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -152,11 +225,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="OptionExtractor.html"><span class="name">OptionExtractor</span></a><span class="result"> extends Transformer</span>
+        <a href="OptionExtractor.html"><span class="name">OptionExtractor</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.out.TraversableExtractor" data-isabs="true">
+    </li><li name="com.novus.salat.transformers.out.TraversableExtractor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TraversableExtractorextendsTransformer"></a>
       <a id="TraversableExtractor:TraversableExtractor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -164,7 +238,7 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="TraversableExtractor.html"><span class="name">TraversableExtractor</span></a><span class="result"> extends Transformer</span>
+        <a href="TraversableExtractor.html"><span class="name">TraversableExtractor</span></a><span class="result"> extends <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a></span>
       </span>
       </h4>
       
@@ -173,9 +247,10 @@
 
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="com.novus.salat.transformers.out.package#select" data-isabs="false">
+              <ol><li name="com.novus.salat.transformers.out.package#select" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="select(t:scala.tools.scalap.scalax.rules.scalasig.TypeRefType,hint:Boolean)(implicitctx:com.novus.salat.Context):com.novus.salat.transformers.Transformer"></a>
       <a id="select(TypeRefType,Boolean)(Context):Transformer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -183,18 +258,32 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">select</span><span class="params">(<span name="t">t: <span name="scala.tools.scalap.scalax.rules.scalasig.TypeRefType" class="extype">TypeRefType</span></span>, <span name="hint">hint: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a name="com.novus.salat.Context" class="extype" href="../../Context.html">Context</a></span>)</span><span class="result">: <a name="com.novus.salat.transformers.Transformer" class="extype" href="../Transformer.html">Transformer</a></span>
+        <span class="name">select</span><span class="params">(<span name="t">t: <span class="extype" name="scala.tools.scalap.scalax.rules.scalasig.TypeRefType">TypeRefType</span></span>, <span name="hint">hint: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="../../Context.html" class="extype" name="com.novus.salat.Context">Context</a></span>)</span><span class="result">: <a href="../Transformer.html" class="extype" name="com.novus.salat.transformers.Transformer">Transformer</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.transformers.out.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      
     </li></ol>
             </div>
+
+        
 
         
         </div>
 
         <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
         
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
         </div>
 
       </div>

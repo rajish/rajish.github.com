@@ -2,24 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>com.novus.salat</title>
+          <title>salat - com.novus.salat</title>
+          <meta name="description" content="salat - com.novus.salat" />
+          <meta name="keywords" content="salat com.novus.salat" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'com.novus.salat.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../lib/package_big.png" />
-        <p id="owner"><a name="com" class="extype" href="../../package.html">com</a>.<a name="com.novus" class="extype" href="../package.html">novus</a></p>
+        <p id="owner"><a href="../../package.html" class="extype" name="com">com</a>.<a href="../package.html" class="extype" name="com.novus">novus</a></p>
         <h1>salat</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
@@ -29,11 +44,11 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
-    
+          <div id="comment" class="fullcommenttop"></div>
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
         
         
         <div id="visbl">
@@ -46,21 +61,23 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="com.novus.salat.ClassAnalyzer" data-isabs="false">
-      <a id="ClassAnalyzer:ClassAnalyzer[A]"></a>
+              <ol><li name="com.novus.salat.ClassAnalyzer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClassAnalyzer[A]extendsLoggingwithProductwithSerializable"></a>
+      <a id="ClassAnalyzer[A]:ClassAnalyzer[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="ClassAnalyzer.html"><span class="name">ClassAnalyzer</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="clazz">clazz: Class[A]</span>, <span name="classLoaders">classLoaders: Iterable[ClassLoader]</span>)</span><span class="result"> extends Logging with Product with Serializable</span>
+        <a href="ClassAnalyzer.html"><span class="name">ClassAnalyzer</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="clazz">clazz: <span class="extype" name="scala.Predef.Class">Class</span>[<span class="extype" name="com.novus.salat.ClassAnalyzer.A">A</span>]</span>, <span name="classLoaders">classLoaders: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="java.lang.ClassLoader">ClassLoader</span>] = <span class="symbol">ClassAnalyzer.ClassLoaders</span></span>)</span><span class="result"> extends <a href="util/Logging.html" class="extype" name="com.novus.salat.util.Logging">Logging</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.EnumStrategy" data-isabs="false">
+    </li><li name="com.novus.salat.EnumStrategy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EnumStrategyextendsEnum[com.novus.salat.EnumStrategy]"></a>
       <a id="EnumStrategy:EnumStrategy"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -68,11 +85,12 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="EnumStrategy.html"><span class="name">EnumStrategy</span></a><span class="result"> extends Enum[EnumStrategy]</span>
+        <a href="EnumStrategy.html"><span class="name">EnumStrategy</span></a><span class="result"> extends <span class="extype" name="java.lang.Enum">Enum</span>[<a href="EnumStrategy.html" class="extype" name="com.novus.salat.EnumStrategy">EnumStrategy</a>]</span>
       </span>
       </h4>
       
-    </li><li visbl="prt" name="com.novus.salat.TypeFinder" data-isabs="false">
+    </li><li name="com.novus.salat.TypeFinder" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TypeFinderextendsProductwithSerializable"></a>
       <a id="TypeFinder:TypeFinder"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -80,7 +98,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="TypeFinder.html"><span class="name">TypeFinder</span></a><span class="params">(<span name="t">t: TypeRefType</span>)</span><span class="result"> extends Product with Serializable</span>
+        <a href="TypeFinder.html"><span class="name">TypeFinder</span></a><span class="params">(<span name="t">t: <span class="extype" name="scala.tools.scalap.scalax.rules.scalasig.TypeRefType">TypeRefType</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -89,9 +107,10 @@
 
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="com.novus.salat.ClassAnalyzer" data-isabs="false">
+              <ol><li name="com.novus.salat.ClassAnalyzer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClassAnalyzer"></a>
       <a id="ClassAnalyzer:ClassAnalyzer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -99,23 +118,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ClassAnalyzer$.html"><span class="name">ClassAnalyzer</span></a><span class="result"> extends Logging with Serializable</span>
+        <a href="ClassAnalyzer$.html"><span class="name">ClassAnalyzer</span></a><span class="result"> extends <a href="util/Logging.html" class="extype" name="com.novus.salat.util.Logging">Logging</a> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.EnumStrategy" data-isabs="false">
-      <a id="EnumStrategy:EnumStrategy"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="EnumStrategy$.html"><span class="name">EnumStrategy</span></a><span class="result"> extends </span>
-      </span>
-      </h4>
-      
-    </li><li visbl="prt" name="com.novus.salat.IsMap" data-isabs="false">
+    </li><li name="com.novus.salat.IsMap" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IsMap"></a>
       <a id="IsMap:IsMap"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -123,11 +131,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="IsMap$.html"><span class="name">IsMap</span></a><span class="result"> extends AnyRef</span>
+        <a href="IsMap$.html"><span class="name">IsMap</span></a>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="com.novus.salat.IsOption" data-isabs="false">
+    </li><li name="com.novus.salat.IsOption" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IsOption"></a>
       <a id="IsOption:IsOption"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -135,11 +144,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="IsOption$.html"><span class="name">IsOption</span></a><span class="result"> extends AnyRef</span>
+        <a href="IsOption$.html"><span class="name">IsOption</span></a>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="com.novus.salat.IsScalaBigDecimal" data-isabs="false">
+    </li><li name="com.novus.salat.IsScalaBigDecimal" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IsScalaBigDecimal"></a>
       <a id="IsScalaBigDecimal:IsScalaBigDecimal"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -147,11 +157,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="IsScalaBigDecimal$.html"><span class="name">IsScalaBigDecimal</span></a><span class="result"> extends AnyRef</span>
+        <a href="IsScalaBigDecimal$.html"><span class="name">IsScalaBigDecimal</span></a>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="com.novus.salat.IsTraversable" data-isabs="false">
+    </li><li name="com.novus.salat.IsTraversable" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IsTraversable"></a>
       <a id="IsTraversable:IsTraversable"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -159,11 +170,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="IsTraversable$.html"><span class="name">IsTraversable</span></a><span class="result"> extends AnyRef</span>
+        <a href="IsTraversable$.html"><span class="name">IsTraversable</span></a>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="com.novus.salat.TypeMatchers" data-isabs="false">
+    </li><li name="com.novus.salat.TypeMatchers" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TypeMatchers"></a>
       <a id="TypeMatchers:TypeMatchers"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -171,11 +183,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="TypeMatchers$.html"><span class="name">TypeMatchers</span></a><span class="result"> extends AnyRef</span>
+        <a href="TypeMatchers$.html"><span class="name">TypeMatchers</span></a>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="prt" name="com.novus.salat.Types" data-isabs="false">
+    </li><li name="com.novus.salat.Types" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Types"></a>
       <a id="Types:Types"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -183,11 +196,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="Types$.html"><span class="name">Types</span></a><span class="result"> extends AnyRef</span>
+        <a href="Types$.html"><span class="name">Types</span></a>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.annotations" data-isabs="false">
+    </li><li name="com.novus.salat.annotations" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="annotations"></a>
       <a id="annotations:annotations"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -199,7 +213,8 @@
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.util" data-isabs="false">
+    </li><li name="com.novus.salat.util" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="util"></a>
       <a id="util:util"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -215,10 +230,20 @@
             </div>
 
         
+
+        
         </div>
 
         <div id="inheritedMembers">
         
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
         </div>
 
       </div>

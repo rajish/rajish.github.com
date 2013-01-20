@@ -2,24 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>com.novus.salat.transformers</title>
+          <title>transformers - com.novus.salat.transformers</title>
+          <meta name="description" content="transformers - com.novus.salat.transformers" />
+          <meta name="keywords" content="transformers com.novus.salat.transformers" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'com.novus.salat.transformers.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
-        <p id="owner"><a name="com" class="extype" href="../../../package.html">com</a>.<a name="com.novus" class="extype" href="../../package.html">novus</a>.<a name="com.novus.salat" class="extype" href="../package.html">salat</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.novus">novus</a>.<a href="../package.html" class="extype" name="com.novus.salat">salat</a></p>
         <h1>transformers</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
@@ -29,13 +44,36 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
-    
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-        
-        
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="com.novus.salat.transformers"><span>transformers</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
             <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
@@ -46,9 +84,10 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="com.novus.salat.transformers.InContextTransformer" data-isabs="true">
+              <ol><li name="com.novus.salat.transformers.InContextTransformer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="InContextTransformerextendsObject"></a>
       <a id="InContextTransformer:InContextTransformer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -56,11 +95,12 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="InContextTransformer.html"><span class="name">InContextTransformer</span></a><span class="result"> extends AnyRef</span>
+        <a href="InContextTransformer.html"><span class="name">InContextTransformer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.Transformer" data-isabs="true">
+    </li><li name="com.novus.salat.transformers.Transformer" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TransformerextendsObject"></a>
       <a id="Transformer:Transformer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -68,7 +108,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Transformer.html"><span class="name">Transformer</span></a><span class="result"> extends AnyRef</span>
+        <a href="Transformer.html"><span class="name">Transformer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
@@ -77,9 +117,10 @@
 
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="com.novus.salat.transformers.in" data-isabs="false">
+              <ol><li name="com.novus.salat.transformers.in" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="in"></a>
       <a id="in:in"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -91,7 +132,8 @@
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.transformers.package#isBigDecimal" data-isabs="false">
+    </li><li name="com.novus.salat.transformers.package#isBigDecimal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isBigDecimal(path:String):Boolean"></a>
       <a id="isBigDecimal(String):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -99,11 +141,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isBigDecimal</span><span class="params">(<span name="path">path: String</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">isBigDecimal</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.transformers.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.transformers.package#isBigInt" data-isabs="false">
+      
+    </li><li name="com.novus.salat.transformers.package#isBigInt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isBigInt(path:String):Boolean"></a>
       <a id="isBigInt(String):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -111,11 +154,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isBigInt</span><span class="params">(<span name="path">path: String</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">isBigInt</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.transformers.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.transformers.package#isChar" data-isabs="false">
+      
+    </li><li name="com.novus.salat.transformers.package#isChar" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isChar(path:String):Boolean"></a>
       <a id="isChar(String):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -123,11 +167,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isChar</span><span class="params">(<span name="path">path: String</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">isChar</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.transformers.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.transformers.package#isFloat" data-isabs="false">
+      
+    </li><li name="com.novus.salat.transformers.package#isFloat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isFloat(path:String):Boolean"></a>
       <a id="isFloat(String):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -135,11 +180,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isFloat</span><span class="params">(<span name="path">path: String</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">isFloat</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.transformers.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.transformers.package#isInt" data-isabs="false">
+      
+    </li><li name="com.novus.salat.transformers.package#isInt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isInt(path:String):Boolean"></a>
       <a id="isInt(String):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -147,11 +193,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInt</span><span class="params">(<span name="path">path: String</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">isInt</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.transformers.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.transformers.package#isJodaDateTime" data-isabs="false">
+      
+    </li><li name="com.novus.salat.transformers.package#isJodaDateTime" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isJodaDateTime(path:String):Boolean"></a>
       <a id="isJodaDateTime(String):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -159,11 +206,25 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isJodaDateTime</span><span class="params">(<span name="path">path: String</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">isJodaDateTime</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="com.novus.salat.transformers.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="com.novus.salat.transformers.out" data-isabs="false">
+      
+    </li><li name="com.novus.salat.transformers.package#isJodaDateTimeZone" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isJodaDateTimeZone(path:String):Boolean"></a>
+      <a id="isJodaDateTimeZone(String):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isJodaDateTimeZone</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.novus.salat.transformers.out" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="out"></a>
       <a id="out:out"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -179,10 +240,24 @@
             </div>
 
         
+
+        
         </div>
 
         <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
         
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
         </div>
 
       </div>

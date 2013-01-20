@@ -2,24 +2,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>com.novus.salat.dao</title>
+          <title>dao - com.novus.salat.dao</title>
+          <meta name="description" content="dao - com.novus.salat.dao" />
+          <meta name="keywords" content="dao com.novus.salat.dao" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'com.novus.salat.dao.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
-        <p id="owner"><a name="com" class="extype" href="../../../package.html">com</a>.<a name="com.novus" class="extype" href="../../package.html">novus</a>.<a name="com.novus.salat" class="extype" href="../package.html">salat</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.novus">novus</a>.<a href="../package.html" class="extype" name="com.novus.salat">salat</a></p>
         <h1>dao</h1>
       </div>
 
-      <h4 class="signature" id="signature">
+      <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">package</span>
@@ -29,11 +44,11 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
-    
+          <div id="comment" class="fullcommenttop"></div>
+        
 
       <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
         
         
         <div id="visbl">
@@ -46,57 +61,89 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="com.novus.salat.dao.BaseDAOMethods" data-isabs="true">
-      <a id="BaseDAOMethods:BaseDAOMethods[ObjectType, ID]"></a>
+              <ol><li name="com.novus.salat.dao.BaseDAOMethods" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BaseDAOMethods[ObjectType&lt;:AnyRef,ID]extendsObject"></a>
+      <a id="BaseDAOMethods[ObjectType&lt;:AnyRef,ID]:BaseDAOMethods[ObjectType,ID]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="BaseDAOMethods.html"><span class="name">BaseDAOMethods</span></a><span class="tparams">[<span name="ObjectType">ObjectType &lt;: AnyRef</span>, <span name="ID">ID</span>]</span><span class="result"> extends AnyRef</span>
+        <a href="BaseDAOMethods.html"><span class="name">BaseDAOMethods</span></a><span class="tparams">[<span name="ObjectType">ObjectType &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="ID">ID</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.dao.DAO" data-isabs="true">
-      <a id="DAO:DAO[ObjectType, ID]"></a>
+    </li><li name="com.novus.salat.dao.ConcreteSubclassDAO" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ConcreteSubclassDAOextendsObject"></a>
+      <a id="ConcreteSubclassDAO:ConcreteSubclassDAO"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="DAO.html"><span class="name">DAO</span></a><span class="tparams">[<span name="ObjectType">ObjectType &lt;: AnyRef</span>, <span name="ID">ID</span>]</span><span class="result"> extends BaseDAOMethods[ObjectType, ID]</span>
+        <a href="ConcreteSubclassDAO.html"><span class="name">ConcreteSubclassDAO</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">When you use a single collection to contain an entire type hierarchy, then use this trait to make sure that type hints
+ are appended to find, count and update queries.</p>
+    </li><li name="com.novus.salat.dao.DAO" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DAO[ObjectType&lt;:AnyRef,ID]extendsBaseDAOMethods[ObjectType,ID]"></a>
+      <a id="DAO[ObjectType&lt;:AnyRef,ID]:DAO[ObjectType,ID]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DAO.html"><span class="name">DAO</span></a><span class="tparams">[<span name="ObjectType">ObjectType &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="ID">ID</span>]</span><span class="result"> extends <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a>[<span class="extype" name="com.novus.salat.dao.DAO.ObjectType">ObjectType</span>, <span class="extype" name="com.novus.salat.dao.DAO.ID">ID</span>]</span>
       </span>
       </h4>
       <p class="comment cmt">Base DAO class.</p>
-    </li><li visbl="pub" name="com.novus.salat.dao.ModelCompanion" data-isabs="true">
-      <a id="ModelCompanion:ModelCompanion[ObjectType, ID]"></a>
+    </li><li name="com.novus.salat.dao.ModelCompanion" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ModelCompanion[ObjectType&lt;:AnyRef,ID]extendsBaseDAOMethods[ObjectType,ID]withLogging"></a>
+      <a id="ModelCompanion[ObjectType&lt;:AnyRef,ID]:ModelCompanion[ObjectType,ID]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="ModelCompanion.html"><span class="name">ModelCompanion</span></a><span class="tparams">[<span name="ObjectType">ObjectType &lt;: AnyRef</span>, <span name="ID">ID</span>]</span><span class="result"> extends BaseDAOMethods[ObjectType, ID] with Logging</span>
+        <a href="ModelCompanion.html"><span class="name">ModelCompanion</span></a><span class="tparams">[<span name="ObjectType">ObjectType &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="ID">ID</span>]</span><span class="result"> extends <a href="BaseDAOMethods.html" class="extype" name="com.novus.salat.dao.BaseDAOMethods">BaseDAOMethods</a>[<span class="extype" name="com.novus.salat.dao.ModelCompanion.ObjectType">ObjectType</span>, <span class="extype" name="com.novus.salat.dao.ModelCompanion.ID">ID</span>] with <span class="extype" name="com.novus.salat.util.Logging">Logging</span></span>
       </span>
       </h4>
       <p class="comment cmt">Play framework style model companion</p>
-    </li><li visbl="pub" name="com.novus.salat.dao.SalatDAO" data-isabs="true">
-      <a id="SalatDAO:SalatDAO[ObjectType, ID]"></a>
+    </li><li name="com.novus.salat.dao.MutilValidateError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MutilValidateErrorextendsErrorwithProductwithSerializable"></a>
+      <a id="MutilValidateError:MutilValidateError"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MutilValidateError.html"><span class="name">MutilValidateError</span></a><span class="params">(<span name="ts">ts: <span class="extype" name="scala.Traversable">Traversable</span>[<span class="extype" name="scala.Throwable">Throwable</span>]</span>)</span><span class="result"> extends <span class="extype" name="java.lang.Error">Error</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.novus.salat.dao.SalatDAO" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SalatDAO[ObjectType&lt;:AnyRef,ID]extendsDAO[ObjectType,ID]withLogging"></a>
+      <a id="SalatDAO[ObjectType&lt;:AnyRef,ID]:SalatDAO[ObjectType,ID]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="SalatDAO.html"><span class="name">SalatDAO</span></a><span class="tparams">[<span name="ObjectType">ObjectType &lt;: AnyRef</span>, <span name="ID">ID</span>]</span><span class="result"> extends DAO[ObjectType, ID] with Logging</span>
+        <a href="SalatDAO.html"><span class="name">SalatDAO</span></a><span class="tparams">[<span name="ObjectType">ObjectType &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="ID">ID</span>]</span><span class="result"> extends <a href="DAO.html" class="extype" name="com.novus.salat.dao.DAO">DAO</a>[<span class="extype" name="com.novus.salat.dao.SalatDAO.ObjectType">ObjectType</span>, <span class="extype" name="com.novus.salat.dao.SalatDAO.ID">ID</span>] with <span class="extype" name="com.mongodb.casbah.commons.Logging">Logging</span></span>
       </span>
       </h4>
       <p class="comment cmt">Sample DAO implementation.</p>
-    </li><li visbl="pub" name="com.novus.salat.dao.SalatDAOError" data-isabs="true">
+    </li><li name="com.novus.salat.dao.SalatDAOError" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SalatDAOErrorextendsError"></a>
       <a id="SalatDAOError:SalatDAOError"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -104,11 +151,12 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="SalatDAOError.html"><span class="name">SalatDAOError</span></a><span class="result"> extends Error</span>
+        <a href="SalatDAOError.html"><span class="name">SalatDAOError</span></a><span class="result"> extends <span class="extype" name="java.lang.Error">Error</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.dao.SalatDAOQueryError" data-isabs="true">
+    </li><li name="com.novus.salat.dao.SalatDAOQueryError" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SalatDAOQueryErrorextendsError"></a>
       <a id="SalatDAOQueryError:SalatDAOQueryError"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -116,11 +164,12 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="SalatDAOQueryError.html"><span class="name">SalatDAOQueryError</span></a><span class="result"> extends Error</span>
+        <a href="SalatDAOQueryError.html"><span class="name">SalatDAOQueryError</span></a><span class="result"> extends <span class="extype" name="java.lang.Error">Error</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.dao.SalatDAOUpdateError" data-isabs="false">
+    </li><li name="com.novus.salat.dao.SalatDAOUpdateError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SalatDAOUpdateErrorextendsErrorwithProductwithSerializable"></a>
       <a id="SalatDAOUpdateError:SalatDAOUpdateError"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -128,11 +177,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SalatDAOUpdateError.html"><span class="name">SalatDAOUpdateError</span></a><span class="params">(<span name="whichDAO">whichDAO: String</span>, <span name="collection">collection: MongoCollection</span>, <span name="query">query: DBObject</span>, <span name="o">o: DBObject</span>, <span name="wc">wc: WriteConcern</span>, <span name="wr">wr: WriteResult</span>, <span name="upsert">upsert: Boolean</span>, <span name="multi">multi: Boolean</span>)</span><span class="result"> extends Error with Product with Serializable</span>
+        <a href="SalatDAOUpdateError.html"><span class="name">SalatDAOUpdateError</span></a><span class="params">(<span name="whichDAO">whichDAO: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="collection">collection: <span class="extype" name="com.mongodb.casbah.TypeImports.MongoCollection">mongodb.casbah.TypeImports.MongoCollection</span></span>, <span name="query">query: <span class="extype" name="com.mongodb.DBObject">DBObject</span></span>, <span name="o">o: <span class="extype" name="com.mongodb.DBObject">DBObject</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.WriteConcern">WriteConcern</span></span>, <span name="wr">wr: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.TypeImports.WriteResult</span></span>, <span name="upsert">upsert: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="multi">multi: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="java.lang.Error">Error</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.dao.SalatInsertError" data-isabs="false">
+    </li><li name="com.novus.salat.dao.SalatInsertError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SalatInsertErrorextendsSalatDAOErrorwithProductwithSerializable"></a>
       <a id="SalatInsertError:SalatInsertError"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -140,35 +190,38 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SalatInsertError.html"><span class="name">SalatInsertError</span></a><span class="params">(<span name="description">description: String</span>, <span name="collection">collection: MongoCollection</span>, <span name="wc">wc: WriteConcern</span>, <span name="wr">wr: WriteResult</span>, <span name="dbos">dbos: List[DBObject]</span>)</span><span class="result"> extends SalatDAOError with Product with Serializable</span>
+        <a href="SalatInsertError.html"><span class="name">SalatInsertError</span></a><span class="params">(<span name="description">description: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="collection">collection: <span class="extype" name="com.mongodb.casbah.TypeImports.MongoCollection">mongodb.casbah.TypeImports.MongoCollection</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.WriteConcern">WriteConcern</span></span>, <span name="wr">wr: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.TypeImports.WriteResult</span></span>, <span name="dbos">dbos: <span class="extype" name="scala.List">List</span>[<span class="extype" name="com.mongodb.DBObject">DBObject</span>]</span>)</span><span class="result"> extends <a href="SalatDAOError.html" class="extype" name="com.novus.salat.dao.SalatDAOError">SalatDAOError</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.dao.SalatMongoCursor" data-isabs="false">
-      <a id="SalatMongoCursor:SalatMongoCursor[T]"></a>
+    </li><li name="com.novus.salat.dao.SalatMongoCursor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SalatMongoCursor[T&lt;:AnyRef]extendsSalatMongoCursorBase[T]withIterator[T]withProductwithSerializable"></a>
+      <a id="SalatMongoCursor[T&lt;:AnyRef]:SalatMongoCursor[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SalatMongoCursor.html"><span class="name">SalatMongoCursor</span></a><span class="tparams">[<span name="T">T &lt;: AnyRef</span>]</span><span class="params">(<span name="_grater">_grater: Grater[T]</span>, <span name="underlying">underlying: DBCursor</span>, <span name="evidence$9">evidence$9: Manifest[T]</span>)</span><span class="result"> extends SalatMongoCursorBase[T] with Iterator[T] with Product with Serializable</span>
+        <a href="SalatMongoCursor.html"><span class="name">SalatMongoCursor</span></a><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>]</span><span class="params">(<span name="_grater">_grater: <a href="../Grater.html" class="extype" name="com.novus.salat.Grater">Grater</a>[<span class="extype" name="com.novus.salat.dao.SalatMongoCursor.T">T</span>]</span>, <span name="underlying">underlying: <span class="extype" name="com.mongodb.DBCursor">DBCursor</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$9">evidence$9: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.novus.salat.dao.SalatMongoCursor.T">T</span>]</span>)</span><span class="result"> extends <a href="SalatMongoCursorBase.html" class="extype" name="com.novus.salat.dao.SalatMongoCursorBase">SalatMongoCursorBase</a>[<span class="extype" name="com.novus.salat.dao.SalatMongoCursor.T">T</span>] with <span class="extype" name="scala.Iterator">Iterator</span>[<span class="extype" name="com.novus.salat.dao.SalatMongoCursor.T">T</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.dao.SalatMongoCursorBase" data-isabs="true">
-      <a id="SalatMongoCursorBase:SalatMongoCursorBase[T]"></a>
+    </li><li name="com.novus.salat.dao.SalatMongoCursorBase" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SalatMongoCursorBase[T&lt;:AnyRef]extendsLogging"></a>
+      <a id="SalatMongoCursorBase[T&lt;:AnyRef]:SalatMongoCursorBase[T]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="SalatMongoCursorBase.html"><span class="name">SalatMongoCursorBase</span></a><span class="tparams">[<span name="T">T &lt;: AnyRef</span>]</span><span class="result"> extends Logging</span>
+        <a href="SalatMongoCursorBase.html"><span class="name">SalatMongoCursorBase</span></a><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>]</span><span class="result"> extends <span class="extype" name="com.novus.salat.util.Logging">Logging</span></span>
       </span>
       </h4>
       <p class="comment cmt">Unfortunately, MongoCursorBase is typed to DBObject, but.</p>
-    </li><li visbl="pub" name="com.novus.salat.dao.SalatRemoveError" data-isabs="false">
+    </li><li name="com.novus.salat.dao.SalatRemoveError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SalatRemoveErrorextendsSalatDAOErrorwithProductwithSerializable"></a>
       <a id="SalatRemoveError:SalatRemoveError"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -176,11 +229,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SalatRemoveError.html"><span class="name">SalatRemoveError</span></a><span class="params">(<span name="description">description: String</span>, <span name="collection">collection: MongoCollection</span>, <span name="wc">wc: WriteConcern</span>, <span name="wr">wr: WriteResult</span>, <span name="dbos">dbos: List[DBObject]</span>)</span><span class="result"> extends SalatDAOError with Product with Serializable</span>
+        <a href="SalatRemoveError.html"><span class="name">SalatRemoveError</span></a><span class="params">(<span name="description">description: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="collection">collection: <span class="extype" name="com.mongodb.casbah.TypeImports.MongoCollection">mongodb.casbah.TypeImports.MongoCollection</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.WriteConcern">WriteConcern</span></span>, <span name="wr">wr: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.TypeImports.WriteResult</span></span>, <span name="dbos">dbos: <span class="extype" name="scala.List">List</span>[<span class="extype" name="com.mongodb.DBObject">DBObject</span>]</span>)</span><span class="result"> extends <a href="SalatDAOError.html" class="extype" name="com.novus.salat.dao.SalatDAOError">SalatDAOError</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.dao.SalatRemoveQueryError" data-isabs="false">
+    </li><li name="com.novus.salat.dao.SalatRemoveQueryError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SalatRemoveQueryErrorextendsSalatDAOQueryErrorwithProductwithSerializable"></a>
       <a id="SalatRemoveQueryError:SalatRemoveQueryError"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -188,11 +242,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SalatRemoveQueryError.html"><span class="name">SalatRemoveQueryError</span></a><span class="params">(<span name="whichDAO">whichDAO: String</span>, <span name="collection">collection: MongoCollection</span>, <span name="query">query: DBObject</span>, <span name="wc">wc: WriteConcern</span>, <span name="wr">wr: WriteResult</span>)</span><span class="result"> extends SalatDAOQueryError with Product with Serializable</span>
+        <a href="SalatRemoveQueryError.html"><span class="name">SalatRemoveQueryError</span></a><span class="params">(<span name="whichDAO">whichDAO: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="collection">collection: <span class="extype" name="com.mongodb.casbah.TypeImports.MongoCollection">mongodb.casbah.TypeImports.MongoCollection</span></span>, <span name="query">query: <span class="extype" name="com.mongodb.DBObject">DBObject</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.WriteConcern">WriteConcern</span></span>, <span name="wr">wr: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.TypeImports.WriteResult</span></span>)</span><span class="result"> extends <a href="SalatDAOQueryError.html" class="extype" name="com.novus.salat.dao.SalatDAOQueryError">SalatDAOQueryError</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="com.novus.salat.dao.SalatSaveError" data-isabs="false">
+    </li><li name="com.novus.salat.dao.SalatSaveError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SalatSaveErrorextendsSalatDAOErrorwithProductwithSerializable"></a>
       <a id="SalatSaveError:SalatSaveError"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -200,7 +255,46 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="SalatSaveError.html"><span class="name">SalatSaveError</span></a><span class="params">(<span name="description">description: String</span>, <span name="collection">collection: MongoCollection</span>, <span name="wc">wc: WriteConcern</span>, <span name="wr">wr: WriteResult</span>, <span name="dbos">dbos: List[DBObject]</span>)</span><span class="result"> extends SalatDAOError with Product with Serializable</span>
+        <a href="SalatSaveError.html"><span class="name">SalatSaveError</span></a><span class="params">(<span name="description">description: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="collection">collection: <span class="extype" name="com.mongodb.casbah.TypeImports.MongoCollection">mongodb.casbah.TypeImports.MongoCollection</span></span>, <span name="wc">wc: <span class="extype" name="com.mongodb.WriteConcern">WriteConcern</span></span>, <span name="wr">wr: <span class="extype" name="com.mongodb.casbah.TypeImports.WriteResult">mongodb.casbah.TypeImports.WriteResult</span></span>, <span name="dbos">dbos: <span class="extype" name="scala.List">List</span>[<span class="extype" name="com.mongodb.DBObject">DBObject</span>]</span>)</span><span class="result"> extends <a href="SalatDAOError.html" class="extype" name="com.novus.salat.dao.SalatDAOError">SalatDAOError</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.novus.salat.dao.Validates" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Validates[T]extendsObject"></a>
+      <a id="Validates[T]:Validates[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Validates.html"><span class="name">Validates</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.novus.salat.dao.ValidatingSalatDAO" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ValidatingSalatDAO[ObjectType&lt;:AnyRef,ID]extendsSalatDAO[ObjectType,ID]"></a>
+      <a id="ValidatingSalatDAO[ObjectType&lt;:AnyRef,ID]:ValidatingSalatDAO[ObjectType,ID]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ValidatingSalatDAO.html"><span class="name">ValidatingSalatDAO</span></a><span class="tparams">[<span name="ObjectType">ObjectType &lt;: <span class="extype" name="scala.AnyRef">AnyRef</span></span>, <span name="ID">ID</span>]</span><span class="result"> extends <a href="SalatDAO.html" class="extype" name="com.novus.salat.dao.SalatDAO">SalatDAO</a>[<span class="extype" name="com.novus.salat.dao.ValidatingSalatDAO.ObjectType">ObjectType</span>, <span class="extype" name="com.novus.salat.dao.ValidatingSalatDAO.ID">ID</span>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.novus.salat.dao.ValidationError" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ValidationError[T]extendsErrorwithProductwithSerializable"></a>
+      <a id="ValidationError[T]:ValidationError[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ValidationError.html"><span class="name">ValidationError</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="t">t: <span class="extype" name="com.novus.salat.dao.ValidationError.T">T</span></span>, <span name="iter">iter: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="scala.Throwable">Throwable</span>]</span>)</span><span class="result"> extends <span class="extype" name="java.lang.Error">Error</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
@@ -212,10 +306,20 @@
         
 
         
+
+        
         </div>
 
         <div id="inheritedMembers">
         
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
         </div>
 
       </div>
